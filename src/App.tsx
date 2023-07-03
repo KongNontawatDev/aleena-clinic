@@ -1,4 +1,4 @@
-import React,{lazy} from 'react'
+import {lazy} from 'react'
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import { ChakraProvider } from '@chakra-ui/react'
 import Fonts from './components/layouts/Fonts'

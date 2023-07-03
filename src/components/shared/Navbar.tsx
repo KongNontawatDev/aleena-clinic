@@ -3,7 +3,6 @@ import {
 	Flex,
 	Text,
 	IconButton,
-	Button,
 	Stack,
 	Collapse,
 	Icon,
@@ -23,7 +22,7 @@ import {
 	ChevronDownIcon,
 	ChevronRightIcon,
 } from "@chakra-ui/icons";
-import { NavLink, Link as ReactLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Facebook } from "react-feather";
 export default function Navbar() {
 	const { isOpen, onToggle } = useDisclosure();
