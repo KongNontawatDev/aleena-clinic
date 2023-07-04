@@ -1,9 +1,8 @@
 import { ArrowUpIcon } from "@chakra-ui/icons";
 import { Box, Container, Heading } from "@chakra-ui/react";
 
-type Props = {};
 
-export default function Pagenotfound({}: Props) {
+export default function Pagenotfound() {
 	return (
 		<Container>
 			<Box
