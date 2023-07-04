@@ -98,7 +98,7 @@ export default function SmallCentered() {
 							</Flex>
 						</LinkOverlay>
 					</LinkBox>
-        <Stack direction={'row'} spacing={6}>
+        <Stack direction={'row'} spacing={6} wrap={'wrap'} justify={'center'}>
           <Link href={'#'}>หน้าแรก</Link>
           <Link href={'#'}>โปรโมชั่น</Link>
           <Link href={'#'}>บริการ</Link>
