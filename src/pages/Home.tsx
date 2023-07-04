@@ -72,42 +72,42 @@ const FeatureList = ({ text, icon }: FeatureProps) => {
 	);
 };
 
-const imagePromotion = ["./image/promotion.jpg"];
+const imagePromotion = ["./image/promotion.webp"];
 
 const imageReview = [
-	"./image/review1.jpg",
-	"./image/review2.jpg",
-	"./image/review3.jpg",
-	"./image/review4.jpg",
-	"./image/review5.jpg",
-	"./image/review6.jpg",
-	"./image/review7.jpg",
-	"./image/review8.jpg",
-	"./image/review9.jpg",
-	"./image/review10.jpg",
-	"./image/review11.jpg",
-	"./image/review12.jpg",
+	"./image/review1.webp",
+	"./image/review2.webp",
+	"./image/review3.webp",
+	"./image/review4.webp",
+	"./image/review5.webp",
+	"./image/review6.webp",
+	"./image/review7.webp",
+	"./image/review8.webp",
+	"./image/review9.webp",
+	"./image/review10.webp",
+	"./image/review11.webp",
+	"./image/review12.webp",
 ];
 
 const imageGallary = [
-	"./image/gallery1.jpg",
-	"./image/gallery2.jpg",
-	"./image/gallery3.jpg",
-	"./image/gallery4.jpg",
-	"./image/gallery5.jpg",
-	"./image/gallery6.jpg",
-	"./image/gallery7.jpg",
-	"./image/gallery8.jpg",
-	"./image/gallery9.jpg",
-	"./image/gallery10.jpg",
-	"./image/gallery11.jpg",
-	"./image/gallery12.jpg",
-	"./image/gallery13.jpg",
-	"./image/gallery14.jpg",
-	"./image/gallery15.jpg",
-	"./image/gallery16.jpg",
-	"./image/gallery17.jpg",
-	"./image/gallery18.jpg",
+	"./image/gallery1.webp",
+	"./image/gallery2.webp",
+	"./image/gallery3.webp",
+	"./image/gallery4.webp",
+	"./image/gallery5.webp",
+	"./image/gallery6.webp",
+	"./image/gallery7.webp",
+	"./image/gallery8.webp",
+	"./image/gallery9.webp",
+	"./image/gallery10.webp",
+	"./image/gallery11.webp",
+	"./image/gallery12.webp",
+	"./image/gallery13.webp",
+	"./image/gallery14.webp",
+	"./image/gallery15.webp",
+	"./image/gallery16.webp",
+	"./image/gallery17.webp",
+	"./image/gallery18.webp",
 ];
 
 export default function Home({}: Props) {
@@ -236,7 +236,7 @@ export default function Home({}: Props) {
 								alt={"Login Image"}
 								objectFit={"cover"}
 								height={"80%"}
-								src={"./image/img1.jpg"}
+								src={"./image/img1.webp"}
 										data-aos="fade-left"
 										data-aos-offset="0"
 							/>
@@ -349,7 +349,7 @@ export default function Home({}: Props) {
 								<Stack direction={"row"} align={"center"}>
 									<Flex w={8} h={8} align={"center"} justify={"center"}>
 										<Image
-											src="./image/number-one.png"
+											src="./image/number-one.webp"
 											width={30}
 											height={30}
 										/>
@@ -361,7 +361,7 @@ export default function Home({}: Props) {
 								<Stack direction={"row"} align={"center"}>
 									<Flex w={8} h={8} align={"center"} justify={"center"}>
 										<Image
-											src="./image/number-two.png"
+											src="./image/number-two.webp"
 											width={30}
 											height={30}
 										/>
@@ -373,7 +373,7 @@ export default function Home({}: Props) {
 								<Stack direction={"row"} align={"center"}>
 									<Flex w={8} h={8} align={"center"} justify={"center"}>
 										<Image
-											src="./image/number-thee.png"
+											src="./image/number-thee.webp"
 											width={30}
 											height={30}
 										/>
@@ -388,7 +388,7 @@ export default function Home({}: Props) {
 							<Image
 								rounded={"3xl"}
 								alt={"feature image"}
-								src={"./image/img3.jpg"}
+								src={"./image/img3.webp"}
 								objectFit={"cover"}
 							/>
 						</Flex>
@@ -404,7 +404,7 @@ export default function Home({}: Props) {
 							<Image
 								rounded={"3xl"}
 								alt={"feature image"}
-								src={"./image/img7.png"}
+								src={"./image/img7.webp"}
 								objectFit={"cover"}
 							/>
 						</Flex>
@@ -460,7 +460,7 @@ export default function Home({}: Props) {
 						<Image
 							rounded={"3xl"}
 							alt={"feature image"}
-							src={"./image/promotion.jpg"}
+							src={"./image/promotion.webp"}
 							objectFit={"cover"}
 							onClick={() => openImageViewerPromotion(0)}
 							data-aos="fade-up"
@@ -473,7 +473,7 @@ export default function Home({}: Props) {
 			<Flex
 				w={"full"}
 				h={"400px"}
-				backgroundImage={"url(./image/img8.jpg)"}
+				backgroundImage={"url(./image/img8.webp)"}
 				backgroundSize={"cover"}
 				backgroundPosition={"center center"}
 				mb={10}
@@ -628,7 +628,7 @@ export default function Home({}: Props) {
 							<Image
 								rounded={"3xl"}
 								alt={"feature image"}
-								src={"./image/map1.jpg"}
+								src={"./image/map1.webp"}
 								objectFit={"cover"}
 							/>
 						</Flex>

@@ -99,11 +99,11 @@ export default function SmallCentered() {
 						</LinkOverlay>
 					</LinkBox>
         <Stack direction={'row'} spacing={6} wrap={'wrap'} justify={'center'}>
-          <Link href={'#'}>หน้าแรก</Link>
-          <Link href={'#'}>โปรโมชั่น</Link>
-          <Link href={'#'}>บริการ</Link>
-          <Link href={'#'}>เกี่ยวกับเรา</Link>
-          <Link href={'#'}>ติดต่อเรา</Link>
+          <Link href={'/'}>หน้าแรก</Link>
+          <Link href={'/promotion'}>โปรโมชั่น</Link>
+          <Link href={'/service'}>บริการ</Link>
+          <Link href={'/about'}>เกี่ยวกับเรา</Link>
+          <Link href={'/contact'}>ติดต่อเรา</Link>
         </Stack>
       </Container>
 
