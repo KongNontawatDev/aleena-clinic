@@ -16,6 +16,7 @@ import {
 	Text,
 	useBreakpointValue,
 	VStack,
+	AspectRatio,
 } from "@chakra-ui/react";
 import {
 	Tag,
@@ -24,20 +25,21 @@ import {
 	UserCheck,
 	Calendar,
 	Facebook,
+	Check,
 } from "react-feather";
 import { Link as ReactLink } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import "./Home.css"
-import { Pagination } from "swiper";
+import "./Home.css";
+import { Pagination, Autoplay } from "swiper";
 import ImageViewer from "react-simple-image-viewer";
 
 type Props = {};
 
 interface FeatureProps {
-	title: string;
+	title?: string;
 	text: string | ReactElement;
 	icon: ReactElement;
 }
@@ -56,11 +58,41 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
 	);
 };
 
-const imagePromotion = [
-  "./image/promotion.jpg"
-]
+const FeatureList = ({ text, icon }: FeatureProps) => {
+	return (
+		<Stack direction={"row"} align={"center"}>
+			<Flex
+				w={8}
+				h={8}
+				align={"center"}
+				justify={"center"}
+				rounded={"full"}
+			>
+				{icon}
+			</Flex>
+			<Text fontWeight={600} fontSize={{base:'md',md:'lg'}}>{text}</Text>
+		</Stack>
+	);
+};
+
+const imagePromotion = ["./image/promotion.jpg"];
 
 const imageReview = [
+	"./image/review1.jpg",
+	"./image/review2.jpg",
+	"./image/review3.jpg",
+	"./image/review4.jpg",
+	"./image/review5.jpg",
+	"./image/review6.jpg",
+	"./image/review7.jpg",
+	"./image/review8.jpg",
+	"./image/review9.jpg",
+	"./image/review10.jpg",
+	"./image/review11.jpg",
+	"./image/review12.jpg",
+];
+
+const imageGallary = [
 	"./image/review1.jpg",
 	"./image/review2.jpg",
 	"./image/review3.jpg",
@@ -81,11 +113,11 @@ export default function Home({}: Props) {
 	const [currentImagePromotion, setCurrentImagePromotion] = useState(0);
 	const [isViewerOpen, setIsViewerOpen] = useState(false);
 	const [isViewerOpenPromotion, setIsViewerOpenPromotion] = useState(false);
-	const openImageViewer = useCallback((index:number) => {
+	const openImageViewer = useCallback((index: number) => {
 		setCurrentImageReview(index);
 		setIsViewerOpen(true);
 	}, []);
-  	const openImageViewerPromotion = useCallback((index:number) => {
+	const openImageViewerPromotion = useCallback((index: number) => {
 		setCurrentImagePromotion(index);
 		setIsViewerOpenPromotion(true);
 	}, []);
@@ -96,7 +128,7 @@ export default function Home({}: Props) {
 		setIsViewerOpen(false);
 		setIsViewerOpenPromotion(false);
 	};
-	
+
 	return (
 		<>
 			{/* Banner */}
@@ -210,9 +242,9 @@ export default function Home({}: Props) {
 					<ModalContent>
 						<Box
 							as="video"
+							autoPlay
 							controls
-							src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-							poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+							src="./image/video.mp4"
 							objectFit="contain"
 							sx={{
 								aspectRatio: "16/9",
@@ -230,7 +262,6 @@ export default function Home({}: Props) {
 						p={5}
 						spacing={10}
 						rounded={"3xl"}
-						
 					>
 						<Feature
 							icon={<Icon as={PhoneCall} w={12} h={12} />}
@@ -284,13 +315,43 @@ export default function Home({}: Props) {
 								sx={{ textIndent: "50px" }}
 							>
 								คลินิกทันตกรรมสาขาใหญ่ ตั้งอยู่ที่ 658 ถนนแจ้งสนิท ตำบลในเมือง
-								อำเภอเมือง จังหวัดยโสธร รหัสไปรษณีย์ 35000
+								อำเภอเมือง จังหวัดยโสธร
 								เปิดให้บริการมานานกว่า 10 ปี ให้บริการทันตกรรม ด้วย เทคโนโลยี
 								ที่ทันสมัยอาทิ ระบบดิจิทอล ทางทันตกรรม
-								เครื่องเอ็กซเรย์ระบบดิจิตอล ทีมทันตแพทย์ของเราที่ คลินิกทันตกรรม
-								ประกอบด้วย ทันตแพทย์ผู้เชี่ยวชาญ ที่ผ่าน อนุมัติบัตร /วุฒิบัตร
-								ท่านสามารถทําการนัดหมายล่วงหน้า หรือปรึกษาปัญหาได้ฟรี
+								เครื่องเอ็กซเรย์ระบบดิจิตอล ท่านสามารถทําการนัดหมายล่วงหน้า หรือปรึกษาปัญหาได้ฟรี และมีทั้งหมด 3 สาขา
 							</Text>
+							<Stack spacing={3}>
+								<Stack direction={'row'} align={'center'}>
+									<Flex
+										w={8}
+										h={8}
+										align={'center'}
+										justify={'center'}>
+										<Image src="./image/number-one.png" width={30} height={30}/>
+									</Flex>
+									<Text fontWeight={600} fontSize={{base:'md',md:'lg'}}>สาขาในเมืองยโสธร</Text>
+								</Stack>
+								<Stack direction={'row'} align={'center'}>
+									<Flex
+										w={8}
+										h={8}
+										align={'center'}
+										justify={'center'}>
+										<Image src="./image/number-two.png" width={30} height={30}/>
+									</Flex>
+									<Text fontWeight={600} fontSize={{base:'md',md:'lg'}}>สาขาเสลภูมิ</Text>
+								</Stack>
+								<Stack direction={'row'} align={'center'}>
+									<Flex
+										w={8}
+										h={8}
+										align={'center'}
+										justify={'center'}>
+										<Image src="./image/number-thee.png" width={30} height={30}/>
+									</Flex>
+									<Text fontWeight={600} fontSize={{base:'md',md:'lg'}}>สาขาเลิงนกทา</Text>
+								</Stack>
+							</Stack>
 						</Stack>
 						<Flex>
 							<Image
@@ -334,13 +395,27 @@ export default function Home({}: Props) {
 								การจัดฟันจะช่วยลดปัญหาการในเคี้ยวอาหารและทำให้ฟันเรียงตัวสวยงามเป็นระเบียบทำให้มีความมั่นใจมากขึ้น
 								นอกจากนี้การจัดฟันยังมีผลดีต่อสุขภาพในช่องปากและฟันอีกด้วย
 							</Text>
+							<Stack spacing={1}>
+								<FeatureList
+									icon={<Check color="green" strokeWidth={4}/>}
+									text={"ได้สุขภาพช่องปากที่ดี"}
+								/>
+								<FeatureList
+									icon={<Check color="green"  strokeWidth={4}/>}
+									text={"ปรับรูปร่างใบหน้า"}
+								/>
+								<FeatureList
+									icon={<Check color="green"  strokeWidth={4}/>}
+									text={"เพิ่มความมั่นใจในตนเอง"}
+								/>
+							</Stack>
 						</Stack>
 					</SimpleGrid>
 				</Container>
 			</Box>
 
 			{/* Promotion Banner */}
-			<Box>
+			<Box mt={{ base: 0, md: 2 }}>
 				<Container py={12}>
 					<VStack>
 						<Stack spacing={4}>
@@ -356,7 +431,7 @@ export default function Home({}: Props) {
 							alt={"feature image"}
 							src={"./image/promotion.jpg"}
 							objectFit={"cover"}
-              onClick={ () => openImageViewerPromotion(0) }
+							onClick={() => openImageViewerPromotion(0)}
 						/>
 					</VStack>
 				</Container>
@@ -369,6 +444,7 @@ export default function Home({}: Props) {
 				backgroundImage={"url(./image/img8.jpg)"}
 				backgroundSize={"cover"}
 				backgroundPosition={"center center"}
+				mb={10}
 			>
 				<VStack
 					w={"full"}
@@ -420,7 +496,7 @@ export default function Home({}: Props) {
 											alt={"feature image"}
 											src={image}
 											objectFit={"cover"}
-                      onClick={ () => openImageViewer(index) }
+											onClick={() => openImageViewer(index)}
 										/>
 									</SwiperSlide>
 								))}
@@ -438,7 +514,7 @@ export default function Home({}: Props) {
 					onClose={closeImageViewer}
 				/>
 			)}
-      {isViewerOpenPromotion && (
+			{isViewerOpenPromotion && (
 				<ImageViewer
 					src={imagePromotion}
 					currentIndex={currentImagePromotion}
@@ -447,6 +523,96 @@ export default function Home({}: Props) {
 					onClose={closeImageViewer}
 				/>
 			)}
+
+			{/* Gallary */}
+			<Box>
+				<Text
+					color={"primary.main"}
+					fontWeight={700}
+					lineHeight={1.2}
+					fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
+					textAlign={"center"}
+					mb={6}
+				>
+					"รอยยิ้มที่สมบูรณ์แบบ ออกแบบได้ด้วยตัวคุณ"
+				</Text>
+				<Swiper
+					style={{ zIndex: -1 }}
+					loop={true}
+					slidesPerView={1}
+					spaceBetween={0}
+					breakpoints={{
+						640: {
+							slidesPerView: 2,
+						},
+						768: {
+							slidesPerView: 3,
+						},
+						1024: {
+							slidesPerView: 4,
+						},
+						1200: {
+							slidesPerView: 5,
+						},
+						1500: {
+							slidesPerView: 6,
+						},
+						1700: {
+							slidesPerView: 7,
+						},
+					}}
+					autoplay={{
+						delay: 2500,
+						disableOnInteraction: false,
+					}}
+					modules={[Autoplay, Pagination]}
+					className="mySwiper"
+				>
+					{imageGallary.map((image: any, index: number) => (
+						<SwiperSlide key={index}>
+							<Image
+								alt={"feature image"}
+								src={image}
+								objectFit={"cover"}
+								onClick={() => openImageViewer(index)}
+								zIndex={-1}
+							/>
+						</SwiperSlide>
+					))}
+				</Swiper>
+			</Box>
+
+			<Box bg={"primary.25"}>
+				<Container py={12}>
+					<Heading size={{ base: "lg", md: "xl" }} mb={6} textAlign={"center"}>
+						#แล้วพบกันที่{" "}
+						<Text as={"span"} color={"primary.main"}>
+							คลินิกทันตกรรม อลีนา
+						</Text>
+					</Heading>
+					<SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+						<Flex>
+							<Image
+								rounded={"3xl"}
+								alt={"feature image"}
+								src={"./image/map1.jpg"}
+								objectFit={"cover"}
+							/>
+						</Flex>
+						<AspectRatio maxW="640px" ratio={1} rounded={"3xl"}>
+							<iframe
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.3310938216746!2d104.14939687582773!3d15.786486446943728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3117ced486d425a5%3A0x3d0f672ff0af9d3!2z4LiE4Lil4Li04LiZ4Li04LiB4LiX4Lix4LiZ4LiV4LiB4Lij4Lij4Lih4Lit4Lil4Li14LiZ4LiyIOC4quC4suC4guC4suC5gOC4oeC4t-C4reC4hyDguKLguYLguKrguJjguKMgLSBBbGVlbmEgRGVudGFsIENsaW5pYyAo4Liq4Lih4Liy4Lii4Lil4LmM4LmA4LiU4Li04LihKQ!5e0!3m2!1sth!2sth!4v1688453964083!5m2!1sth!2sth"
+								width="600"
+								height="450"
+								style={{ border: 0, borderRadius: "1.5rem" }}
+								allowFullScreen={false}
+								loading="lazy"
+								referrerPolicy="no-referrer-when-downgrade"
+							></iframe>
+						</AspectRatio>
+					</SimpleGrid>
+				</Container>
+			</Box>
 		</>
 	);
 }

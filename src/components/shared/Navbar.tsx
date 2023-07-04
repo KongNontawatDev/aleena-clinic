@@ -15,6 +15,8 @@ import {
 	useDisclosure,
 	Container,
 	Image,
+	LinkOverlay,
+	LinkBox,
 } from "@chakra-ui/react";
 import {
 	HamburgerIcon,
@@ -34,48 +36,55 @@ export default function Navbar() {
 			borderBottom={1}
 			borderStyle={"solid"}
 			borderColor={"gray.200"}
-			position={'sticky'}
+			position={"sticky"}
 			top={0}
-			zIndex={1}
+			zIndex={10000000}
 		>
 			<Container>
 				<Flex
 					minH={{ base: "50px", md: "65px" }}
-					py={{ base: 2}}
-					px={{ base: 1,md:4 }}
+					py={{ base: 2 }}
+					px={{ base: 1, md: 4 }}
 					align={"center"}
 					justifyContent={"space-between"}
 				>
 					{/* logo */}
-					<Flex justify={{ base: "start" }} align={"center"}>
-						<Image
-							src="./image/logo.png"
-							alt="logo"
-							height={{ base: 39, md: 50 }}
-							width={{ base: 39, md: 50 }}
-						/>
-						<Box ml={2}>
-							<Text
-								textAlign={'left'}
-								fontFamily={"heading_logo"}
-								fontWeight={700}
-								fontSize={"xl"}
-								color={"primary.main"}
-							>
-								aleena
-							</Text>
-							<Text
-								textAlign={useBreakpointValue({ base: "center", md: "left" })}
-								fontFamily={"body_logo"}
-								fontSize={"xs"}
-								color={"gray.600"}
-								mt={-2}
-								letterSpacing={0.3}
-							>
-								dental clinic
-							</Text>
-						</Box>
-					</Flex>
+					<LinkBox>
+						<LinkOverlay href="/">
+							<Flex justify={{ base: "start" }} align={"center"}>
+								<Image
+									src="./image/logo.png"
+									alt="logo"
+									height={{ base: 39, md: 50 }}
+									width={{ base: 39, md: 50 }}
+								/>
+								<Box ml={2}>
+									<Text
+										textAlign={"left"}
+										fontFamily={"heading_logo"}
+										fontWeight={700}
+										fontSize={"xl"}
+										color={"primary.main"}
+									>
+										aleena
+									</Text>
+									<Text
+										textAlign={useBreakpointValue({
+											base: "center",
+											md: "left",
+										})}
+										fontFamily={"body_logo"}
+										fontSize={"xs"}
+										color={"gray.600"}
+										mt={-2}
+										letterSpacing={0.3}
+									>
+										dental clinic
+									</Text>
+								</Box>
+							</Flex>
+						</LinkOverlay>
+					</LinkBox>
 
 					{/* menu */}
 					<Flex display={{ base: "none", md: "flex" }}>
@@ -166,7 +175,17 @@ const DesktopNav = () => {
 				</Box>
 			))}
 			<Box>
-				<IconButton as={Link} href="https://www.facebook.com/aleenadentalclinicyasothon" target="_blank" variant='ghost' color={'gray.500'} aria-label='facebook' fontSize='28px' icon={<Facebook/>} size={'xs'}/> 
+				<IconButton
+					as={Link}
+					href="https://www.facebook.com/aleenadentalclinicyasothon"
+					target="_blank"
+					variant="ghost"
+					color={"gray.500"}
+					aria-label="facebook"
+					fontSize="28px"
+					icon={<Facebook />}
+					size={"xs"}
+				/>
 			</Box>
 		</Stack>
 	);

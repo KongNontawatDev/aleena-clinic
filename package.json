@@ -20,15 +20,12 @@
     "react-feather": "^2.0.10",
     "react-router-dom": "^6.14.0",
     "react-simple-image-viewer": "^1.2.2",
-    "react-slick": "^0.29.0",
-    "swiper": "^9.4.1",
-    "vite-tsconfig-paths": "^4.2.0"
+    "swiper": "^9.4.1"
   },
   "devDependencies": {
     "@types/node": "^20.3.3",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
-    "@types/react-slick": "^0.23.10",
     "@types/swiper": "^6.0.0",
     "@typescript-eslint/eslint-plugin": "^5.59.0",
     "@typescript-eslint/parser": "^5.59.0",
