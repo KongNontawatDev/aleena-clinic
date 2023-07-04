@@ -1,4 +1,4 @@
-import { useState, ReactElement, useCallback } from "react";
+import { useState, ReactElement, useCallback, useEffect } from "react";
 import {
 	Box,
 	Button,
@@ -35,7 +35,8 @@ import "swiper/css/pagination";
 import "./Home.css";
 import { Pagination, Autoplay } from "swiper";
 import ImageViewer from "react-simple-image-viewer";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 type Props = {};
 
 interface FeatureProps {
@@ -61,16 +62,12 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
 const FeatureList = ({ text, icon }: FeatureProps) => {
 	return (
 		<Stack direction={"row"} align={"center"}>
-			<Flex
-				w={8}
-				h={8}
-				align={"center"}
-				justify={"center"}
-				rounded={"full"}
-			>
+			<Flex w={8} h={8} align={"center"} justify={"center"} rounded={"full"}>
 				{icon}
 			</Flex>
-			<Text fontWeight={600} fontSize={{base:'md',md:'lg'}}>{text}</Text>
+			<Text fontWeight={600} fontSize={{ base: "md", md: "lg" }}>
+				{text}
+			</Text>
 		</Stack>
 	);
 };
@@ -128,7 +125,11 @@ export default function Home({}: Props) {
 		setIsViewerOpen(false);
 		setIsViewerOpenPromotion(false);
 	};
-
+	useEffect(() => {
+		AOS.init({
+			once: true
+		});
+	}, [])
 	return (
 		<>
 			{/* Banner */}
@@ -148,7 +149,8 @@ export default function Home({}: Props) {
 							align={"center"}
 							justify={"start"}
 						>
-							<Stack spacing={6} w={"full"} maxW={"xl"}>
+							<Stack spacing={6} w={"full"} maxW={"xl"} data-aos="fade-right">
+										
 								{/* <Image src="./image/logo.png" width={{base:100}}/> */}
 								<Heading
 									fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
@@ -189,11 +191,13 @@ export default function Home({}: Props) {
 										Dental Clinic
 									</Text>{" "}
 								</Heading>
+								
 								<Text fontSize={{ base: "sm", lg: "xl" }} color={"gray.500"}>
 									" รอยยิ้มที่สมบูรณ์ออกแบบได้ด้วยตัวคุณ "
 									ที่คลีนิกทันตกรรมอลีนาให้มากกว่าการรักษา …เหนือกว่าการทำฟัน
 									คือความใส่ใจ 🤍
 								</Text>
+							
 								<Stack direction={{ base: "column", md: "row" }} spacing={4}>
 									<Button
 										px={"7"}
@@ -227,6 +231,7 @@ export default function Home({}: Props) {
 								objectFit={"cover"}
 								height={"80%"}
 								src={"./image/img1.jpg"}
+										data-aos="fade-left"
 							/>
 						</Flex>
 					</Stack>
@@ -263,22 +268,29 @@ export default function Home({}: Props) {
 						spacing={10}
 						rounded={"3xl"}
 					>
+						<div data-aos="fade-right">
 						<Feature
 							icon={<Icon as={PhoneCall} w={12} h={12} />}
 							title={"เบอร์โทรศัพท์"}
 							text={"098-356-3711"}
 						/>
-						<Feature
+						</div>
+						<div data-aos="fade-up">
+													<Feature
 							icon={<Icon as={UserCheck} w={12} h={12} />}
 							title={"พูดคุยกับคุณหมอ"}
 							text={"ปรึกษาปัญหาฟรี!!"}
 						/>
-						<Feature
+						</div>
+						<div data-aos="fade-down">
+													<Feature
 							icon={<Icon as={Calendar} w={12} h={12} />}
 							title={"เปิดบริการทุกวัน"}
 							text={`ตั้งแต่ 16.00 น - 20.00 น`}
 						/>
-						<Feature
+						</div>
+						<div data-aos="fade-left">
+													<Feature
 							icon={<Icon as={Facebook} w={12} h={12} />}
 							title={"ติดตามข่าวสารได้ที่"}
 							text={
@@ -292,6 +304,11 @@ export default function Home({}: Props) {
 								</Link>
 							}
 						/>
+						</div>
+
+
+
+
 					</SimpleGrid>
 				</Container>
 			</Box>
@@ -300,7 +317,7 @@ export default function Home({}: Props) {
 			<Box>
 				<Container py={12}>
 					<SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-						<Stack spacing={4}>
+						<Stack spacing={4} data-aos="fade-right">
 							<Heading size={{ base: "lg", md: "xl" }}>
 								คลินิกทันตกรรม{" "}
 								<Text as={"span"} color={"primary.main"}>
@@ -315,45 +332,52 @@ export default function Home({}: Props) {
 								sx={{ textIndent: "50px" }}
 							>
 								คลินิกทันตกรรมสาขาใหญ่ ตั้งอยู่ที่ 658 ถนนแจ้งสนิท ตำบลในเมือง
-								อำเภอเมือง จังหวัดยโสธร
-								เปิดให้บริการมานานกว่า 10 ปี ให้บริการทันตกรรม ด้วย เทคโนโลยี
-								ที่ทันสมัยอาทิ ระบบดิจิทอล ทางทันตกรรม
-								เครื่องเอ็กซเรย์ระบบดิจิตอล ท่านสามารถทําการนัดหมายล่วงหน้า หรือปรึกษาปัญหาได้ฟรี และมีทั้งหมด 3 สาขา
+								อำเภอเมือง จังหวัดยโสธร เปิดให้บริการมานานกว่า 10 ปี
+								ให้บริการทันตกรรม ด้วย เทคโนโลยี ที่ทันสมัยอาทิ ระบบดิจิทอล
+								ทางทันตกรรม เครื่องเอ็กซเรย์ระบบดิจิตอล
+								ท่านสามารถทําการนัดหมายล่วงหน้า หรือปรึกษาปัญหาได้ฟรี
+								และมีทั้งหมด 3 สาขา
 							</Text>
 							<Stack spacing={3}>
-								<Stack direction={'row'} align={'center'}>
-									<Flex
-										w={8}
-										h={8}
-										align={'center'}
-										justify={'center'}>
-										<Image src="./image/number-one.png" width={30} height={30}/>
+								<Stack direction={"row"} align={"center"}>
+									<Flex w={8} h={8} align={"center"} justify={"center"}>
+										<Image
+											src="./image/number-one.png"
+											width={30}
+											height={30}
+										/>
 									</Flex>
-									<Text fontWeight={600} fontSize={{base:'md',md:'lg'}}>สาขาในเมืองยโสธร</Text>
+									<Text fontWeight={600} fontSize={{ base: "md", md: "lg" }}>
+										สาขาในเมืองยโสธร
+									</Text>
 								</Stack>
-								<Stack direction={'row'} align={'center'}>
-									<Flex
-										w={8}
-										h={8}
-										align={'center'}
-										justify={'center'}>
-										<Image src="./image/number-two.png" width={30} height={30}/>
+								<Stack direction={"row"} align={"center"}>
+									<Flex w={8} h={8} align={"center"} justify={"center"}>
+										<Image
+											src="./image/number-two.png"
+											width={30}
+											height={30}
+										/>
 									</Flex>
-									<Text fontWeight={600} fontSize={{base:'md',md:'lg'}}>สาขาเสลภูมิ</Text>
+									<Text fontWeight={600} fontSize={{ base: "md", md: "lg" }}>
+										สาขาเสลภูมิ
+									</Text>
 								</Stack>
-								<Stack direction={'row'} align={'center'}>
-									<Flex
-										w={8}
-										h={8}
-										align={'center'}
-										justify={'center'}>
-										<Image src="./image/number-thee.png" width={30} height={30}/>
+								<Stack direction={"row"} align={"center"}>
+									<Flex w={8} h={8} align={"center"} justify={"center"}>
+										<Image
+											src="./image/number-thee.png"
+											width={30}
+											height={30}
+										/>
 									</Flex>
-									<Text fontWeight={600} fontSize={{base:'md',md:'lg'}}>สาขาเลิงนกทา</Text>
+									<Text fontWeight={600} fontSize={{ base: "md", md: "lg" }}>
+										สาขาเลิงนกทา
+									</Text>
 								</Stack>
 							</Stack>
 						</Stack>
-						<Flex>
+						<Flex data-aos="fade-left">
 							<Image
 								rounded={"3xl"}
 								alt={"feature image"}
@@ -369,7 +393,7 @@ export default function Home({}: Props) {
 			<Box bg={"primary.25"}>
 				<Container py={12}>
 					<SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-						<Flex order={{ base: 2, md: 1 }}>
+						<Flex order={{ base: 2, md: 1 }} data-aos="fade-right">
 							<Image
 								rounded={"3xl"}
 								alt={"feature image"}
@@ -377,7 +401,7 @@ export default function Home({}: Props) {
 								objectFit={"cover"}
 							/>
 						</Flex>
-						<Stack spacing={4} order={{ base: 1, md: 2 }}>
+						<Stack spacing={4} order={{ base: 1, md: 2 }} data-aos="fade-left">
 							<Heading size={{ base: "lg", md: "xl" }}>
 								ทำไมต้องจัดฟัน
 								<Text as={"span"} color={"primary.main"}>
@@ -397,15 +421,15 @@ export default function Home({}: Props) {
 							</Text>
 							<Stack spacing={1}>
 								<FeatureList
-									icon={<Check color="green" strokeWidth={4}/>}
+									icon={<Check color="green" strokeWidth={4} />}
 									text={"ได้สุขภาพช่องปากที่ดี"}
 								/>
 								<FeatureList
-									icon={<Check color="green"  strokeWidth={4}/>}
+									icon={<Check color="green" strokeWidth={4} />}
 									text={"ปรับรูปร่างใบหน้า"}
 								/>
 								<FeatureList
-									icon={<Check color="green"  strokeWidth={4}/>}
+									icon={<Check color="green" strokeWidth={4} />}
 									text={"เพิ่มความมั่นใจในตนเอง"}
 								/>
 							</Stack>
@@ -418,7 +442,7 @@ export default function Home({}: Props) {
 			<Box mt={{ base: 0, md: 2 }}>
 				<Container py={12}>
 					<VStack>
-						<Stack spacing={4}>
+						<Stack spacing={4} data-aos="fade-down">
 							<Heading size={{ base: "lg", md: "xl" }} mb={5}>
 								โปรโมชั่น
 								<Text as={"span"} color={"primary.main"}>
@@ -432,6 +456,7 @@ export default function Home({}: Props) {
 							src={"./image/promotion.jpg"}
 							objectFit={"cover"}
 							onClick={() => openImageViewerPromotion(0)}
+							data-aos="fade-up"
 						/>
 					</VStack>
 				</Container>
@@ -445,6 +470,7 @@ export default function Home({}: Props) {
 				backgroundSize={"cover"}
 				backgroundPosition={"center center"}
 				mb={10}
+				data-aos="fade-right"
 			>
 				<VStack
 					w={"full"}
@@ -525,7 +551,7 @@ export default function Home({}: Props) {
 			)}
 
 			{/* Gallary */}
-			<Box>
+			<Box data-aos="fade-up">
 				<Text
 					color={"primary.main"}
 					fontWeight={700}
@@ -584,14 +610,14 @@ export default function Home({}: Props) {
 
 			<Box bg={"primary.25"}>
 				<Container py={12}>
-					<Heading size={{ base: "lg", md: "xl" }} mb={6} textAlign={"center"}>
+					<Heading size={{ base: "lg", md: "xl" }} mb={6} textAlign={"center"} data-aos="fade-up">
 						#แล้วพบกันที่{" "}
 						<Text as={"span"} color={"primary.main"}>
 							คลินิกทันตกรรม อลีนา
 						</Text>
 					</Heading>
 					<SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-						<Flex>
+						<Flex data-aos="fade-right">
 							<Image
 								rounded={"3xl"}
 								alt={"feature image"}
@@ -599,7 +625,7 @@ export default function Home({}: Props) {
 								objectFit={"cover"}
 							/>
 						</Flex>
-						<AspectRatio maxW="640px" ratio={1} rounded={"3xl"}>
+						<AspectRatio maxW="640px" ratio={1} rounded={"3xl"} data-aos="fade-left">
 							<iframe
 								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.3310938216746!2d104.14939687582773!3d15.786486446943728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3117ced486d425a5%3A0x3d0f672ff0af9d3!2z4LiE4Lil4Li04LiZ4Li04LiB4LiX4Lix4LiZ4LiV4LiB4Lij4Lij4Lih4Lit4Lil4Li14LiZ4LiyIOC4quC4suC4guC4suC5gOC4oeC4t-C4reC4hyDguKLguYLguKrguJjguKMgLSBBbGVlbmEgRGVudGFsIENsaW5pYyAo4Liq4Lih4Liy4Lii4Lil4LmM4LmA4LiU4Li04LihKQ!5e0!3m2!1sth!2sth!4v1688453964083!5m2!1sth!2sth"
 								width="600"
