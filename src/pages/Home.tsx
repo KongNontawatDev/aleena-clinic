@@ -90,18 +90,24 @@ const imageReview = [
 ];
 
 const imageGallary = [
-	"./image/review1.jpg",
-	"./image/review2.jpg",
-	"./image/review3.jpg",
-	"./image/review4.jpg",
-	"./image/review5.jpg",
-	"./image/review6.jpg",
-	"./image/review7.jpg",
-	"./image/review8.jpg",
-	"./image/review9.jpg",
-	"./image/review10.jpg",
-	"./image/review11.jpg",
-	"./image/review12.jpg",
+	"./image/gallery1.jpg",
+	"./image/gallery2.jpg",
+	"./image/gallery3.jpg",
+	"./image/gallery4.jpg",
+	"./image/gallery5.jpg",
+	"./image/gallery6.jpg",
+	"./image/gallery7.jpg",
+	"./image/gallery8.jpg",
+	"./image/gallery9.jpg",
+	"./image/gallery10.jpg",
+	"./image/gallery11.jpg",
+	"./image/gallery12.jpg",
+	"./image/gallery13.jpg",
+	"./image/gallery14.jpg",
+	"./image/gallery15.jpg",
+	"./image/gallery16.jpg",
+	"./image/gallery17.jpg",
+	"./image/gallery18.jpg",
 ];
 
 export default function Home({}: Props) {
