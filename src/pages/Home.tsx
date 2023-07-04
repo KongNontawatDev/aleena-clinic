@@ -238,7 +238,7 @@ export default function Home({}: Props) {
 								height={"80%"}
 								src={"./image/img1.jpg"}
 										data-aos="fade-left"
-										data-aos-offset="-300"
+										data-aos-offset="-500"
 							/>
 						</Flex>
 					</Stack>
