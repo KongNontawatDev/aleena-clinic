@@ -233,7 +233,7 @@ export default function Promotion({}: Props) {
 				<Box my={12}>
 					<Container>
 						<SimpleGrid
-							columns={{ base: 1, md: 2, lg: 3 }}
+							columns={{ base: 1, md: 2, lg: 4 }}
 							spacing={10}
 							data-aos="fade-up"
 						>
@@ -258,6 +258,13 @@ export default function Promotion({}: Props) {
 								rounded={"3xl"}
 								alt={"feature image"}
 								src={"./image/promotion6.webp"}
+								objectFit={"cover"}
+                onClick={()=>openImageViewer(4)}
+							/>
+							<Image
+								rounded={"3xl"}
+								alt={"feature image"}
+								src={"./image/promotion7.webp"}
 								objectFit={"cover"}
                 onClick={()=>openImageViewer(4)}
 							/>
