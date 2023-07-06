@@ -16,7 +16,6 @@ import {
 	Text,
 	useBreakpointValue,
 	VStack,
-	AspectRatio,
 } from "@chakra-ui/react";
 import {
 	Tag,
@@ -35,8 +34,8 @@ import "swiper/css/pagination";
 import "./Home.css";
 import { Pagination, Autoplay } from "swiper";
 import ImageViewer from "react-simple-image-viewer";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 type Props = {};
 
 interface FeatureProps {
@@ -72,7 +71,8 @@ const FeatureList = ({ text, icon }: FeatureProps) => {
 	);
 };
 
-const imagePromotion = ["./image/promotion.webp"];
+
+const imagePromotion = ["./image/promotion1.webp"];
 
 const imageReview = [
 	"./image/review1.webp",
@@ -133,9 +133,9 @@ export default function Home({}: Props) {
 	};
 	useEffect(() => {
 		AOS.init({
-			once: true
+			once: true,
 		});
-	}, [])
+	}, []);
 	return (
 		<>
 			{/* Banner */}
@@ -156,7 +156,6 @@ export default function Home({}: Props) {
 							justify={"start"}
 						>
 							<Stack spacing={6} w={"full"} maxW={"xl"} data-aos="fade-right">
-										
 								{/* <Image src="./image/logo.png" width={{base:100}}/> */}
 								<Heading
 									fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
@@ -197,15 +196,19 @@ export default function Home({}: Props) {
 										Dental Clinic
 									</Text>{" "}
 								</Heading>
-								
+
 								<Text fontSize={{ base: "sm", lg: "xl" }} color={"gray.500"}>
 									" รอยยิ้มที่สมบูรณ์ออกแบบได้ด้วยตัวคุณ "
 									ที่คลีนิกทันตกรรมอลีนาให้มากกว่าการรักษา …เหนือกว่าการทำฟัน
-									คือความใส่ใจ 🤍
+									คือความใส่ใจ 🤍<br></br>
+									🫰พร้อมมอบประสบการณ์การทำฟันที่แตกต่าง
+									ร่วมมาพิสูจน์ทุกคำรีวิวที่เกิดขึ้นที่นี่ คลินิกทันตกรรมอลีนา
 								</Text>
-							
+
 								<Stack direction={{ base: "column", md: "row" }} spacing={4}>
 									<Button
+										as={Link}
+										href="/promotion"
 										px={"7"}
 										leftIcon={<Tag />}
 										rounded={"full"}
@@ -230,42 +233,44 @@ export default function Home({}: Props) {
 								</Stack>
 							</Stack>
 						</Flex>
-						<Flex flex={1} align={"center"} justify={"center"}>
+						<Flex
+							flex={1}
+							align={"center"}
+							justify={"center"}
+							data-aos="fade-left"
+						>
 							<Image
 								rounded={"3xl"}
-								alt={"Login Image"}
+								alt={"banner Image"}
 								objectFit={"cover"}
 								height={"80%"}
-								src={"./image/img1.webp"}
-										data-aos="fade-left"
-										data-aos-offset="0"
+								src={"./image/banner3.webp"}
 							/>
 						</Flex>
 					</Stack>
 				</Container>
-
-				<Modal
-					isOpen={openedVideo}
-					onClose={() => setOpenedVideo(false)}
-					isCentered
-					size={"6xl"}
-				>
-					<ModalOverlay />
-					<ModalContent>
-						<Box
-							as="video"
-							autoPlay
-							controls
-							src="./image/video.mp4"
-							objectFit="contain"
-							sx={{
-								aspectRatio: "16/9",
-							}}
-						/>
-					</ModalContent>
-				</Modal>
 			</Box>
 
+			<Modal
+				isOpen={openedVideo}
+				onClose={() => setOpenedVideo(false)}
+				isCentered
+				size={"6xl"}
+			>
+				<ModalOverlay zIndex={20}/>
+				<ModalContent>
+					<Box
+						as="video"
+						autoPlay
+						controls
+						src="./image/video.mp4"
+						objectFit="contain"
+						sx={{
+							aspectRatio: "16/9",
+						}}
+					/>
+				</ModalContent>
+			</Modal>
 			{/* Feature */}
 			<Box bg={"primary.25"}>
 				<Container>
@@ -276,46 +281,42 @@ export default function Home({}: Props) {
 						rounded={"3xl"}
 					>
 						<div data-aos="fade-right">
-						<Feature
-							icon={<Icon as={PhoneCall} w={12} h={12} />}
-							title={"เบอร์โทรศัพท์"}
-							text={"098-356-3711"}
-						/>
+							<Feature
+								icon={<Icon as={PhoneCall} w={12} h={12} />}
+								title={"เบอร์โทรศัพท์"}
+								text={"098-356-3711"}
+							/>
 						</div>
 						<div data-aos="fade-up">
-													<Feature
-							icon={<Icon as={UserCheck} w={12} h={12} />}
-							title={"พูดคุยกับคุณหมอ"}
-							text={"ปรึกษาปัญหาฟรี!!"}
-						/>
+							<Feature
+								icon={<Icon as={UserCheck} w={12} h={12} />}
+								title={"พูดคุยกับคุณหมอ"}
+								text={"ปรึกษาปัญหาฟรี!!"}
+							/>
 						</div>
 						<div data-aos="fade-down">
-													<Feature
-							icon={<Icon as={Calendar} w={12} h={12} />}
-							title={"เปิดบริการทุกวัน"}
-							text={`ตั้งแต่ 16.00 น - 20.00 น`}
-						/>
+							<Feature
+								icon={<Icon as={Calendar} w={12} h={12} />}
+								title={"เปิดบริการทุกวัน"}
+								text={`ตั้งแต่ 16.00 น - 20.00 น`}
+							/>
 						</div>
 						<div data-aos="fade-left">
-													<Feature
-							icon={<Icon as={Facebook} w={12} h={12} />}
-							title={"ติดตามข่าวสารได้ที่"}
-							text={
-								<Link
-									textDecoration={"underline"}
-									as={ReactLink}
-									to={"https://www.facebook.com/aleenadentalclinicyasothon"}
-									target="_blank"
-								>
-									เพจเฟสบุ๊ค
-								</Link>
-							}
-						/>
+							<Feature
+								icon={<Icon as={Facebook} w={12} h={12} />}
+								title={"ติดตามข่าวสารได้ที่"}
+								text={
+									<Link
+										textDecoration={"underline"}
+										as={ReactLink}
+										to={"https://www.facebook.com/aleenadentalclinicyasothon"}
+										target="_blank"
+									>
+										เพจเฟสบุ๊ค
+									</Link>
+								}
+							/>
 						</div>
-
-
-
-
 					</SimpleGrid>
 				</Container>
 			</Box>
@@ -460,7 +461,7 @@ export default function Home({}: Props) {
 						<Image
 							rounded={"3xl"}
 							alt={"feature image"}
-							src={"./image/promotion.webp"}
+							src={"./image/promotion1.webp"}
 							objectFit={"cover"}
 							onClick={() => openImageViewerPromotion(0)}
 							data-aos="fade-up"
@@ -477,7 +478,7 @@ export default function Home({}: Props) {
 				backgroundSize={"cover"}
 				backgroundPosition={"center center"}
 				mb={10}
-				data-aos="fade-right"
+				data-aos="fade-up"
 			>
 				<VStack
 					w={"full"}
@@ -617,14 +618,24 @@ export default function Home({}: Props) {
 
 			<Box bg={"primary.25"}>
 				<Container py={12}>
-					<Heading size={{ base: "lg", md: "xl" }} mb={6} textAlign={"center"} data-aos="fade-up">
-						#แล้วพบกันที่{" "}
+					<Heading
+						size={{ base: "lg", md: "xl" }}
+						mb={6}
+						textAlign={"center"}
+						data-aos="fade-up"
+					>
+						#แล้วพบกันที่ <br></br>
 						<Text as={"span"} color={"primary.main"}>
 							คลินิกทันตกรรม อลีนา
 						</Text>
 					</Heading>
 					<SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-						<Flex data-aos="fade-right">
+						<Flex
+							data-aos="fade-right"
+							as={Link}
+							href="https://goo.gl/maps/wHwV31YUeKTTkZqM7"
+							target="_blank"
+						>
 							<Image
 								rounded={"3xl"}
 								alt={"feature image"}
@@ -632,17 +643,19 @@ export default function Home({}: Props) {
 								objectFit={"cover"}
 							/>
 						</Flex>
-						<AspectRatio maxW="640px" ratio={1} rounded={"3xl"} data-aos="fade-left">
-							<iframe
-								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.3310938216746!2d104.14939687582773!3d15.786486446943728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3117ced486d425a5%3A0x3d0f672ff0af9d3!2z4LiE4Lil4Li04LiZ4Li04LiB4LiX4Lix4LiZ4LiV4LiB4Lij4Lij4Lih4Lit4Lil4Li14LiZ4LiyIOC4quC4suC4guC4suC5gOC4oeC4t-C4reC4hyDguKLguYLguKrguJjguKMgLSBBbGVlbmEgRGVudGFsIENsaW5pYyAo4Liq4Lih4Liy4Lii4Lil4LmM4LmA4LiU4Li04LihKQ!5e0!3m2!1sth!2sth!4v1688453964083!5m2!1sth!2sth"
-								width="600"
-								height="450"
-								style={{ border: 0, borderRadius: "1.5rem" }}
-								allowFullScreen={false}
-								loading="lazy"
-								referrerPolicy="no-referrer-when-downgrade"
-							></iframe>
-						</AspectRatio>
+						<Flex
+							data-aos="fade-left"
+							as={Link}
+							href="https://www.facebook.com/aleenadentalclinicyasothon"
+							target="_blank"
+						>
+							<Image
+								rounded={"3xl"}
+								alt={"feature image"}
+								src={"./image/opened.webp"}
+								objectFit={"cover"}
+							/>
+						</Flex>
 					</SimpleGrid>
 				</Container>
 			</Box>
