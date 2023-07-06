@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import {
-	AspectRatio,
 	Box,
 	Container,
 	Divider,
