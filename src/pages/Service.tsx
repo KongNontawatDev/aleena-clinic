@@ -219,62 +219,7 @@ export default function Service({}: Props) {
 				</Container>
 			</Box>
 
-			<Box>
-				<Container>
-					<Flex data-aos="fade-down" justify={"center"}>
-						<Image
-							alt={"feature image"}
-							src={"./image/logo.png"}
-							width={{ base: 70, md: 90 }}
-						/>
-					</Flex>
-					<Heading
-						size={{ base: "lg", md: "xl" }}
-						textAlign={"center"}
-						color={"primary.main"}
-						data-aos="fade-down"
-            mt={4}
-					>
-						ทีมแพทย์ผู้เชี่ยวชาญ{" "}
-					</Heading>
 
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} my={12}>
-						<Flex data-aos="fade-right">
-							<Image
-								rounded={"3xl"}
-								alt={"feature image"}
-								src={"./image/doct1.webp"}
-								objectFit={"cover"}
-							/>
-						</Flex>
-						<Flex data-aos="fade-left">
-							<Image
-								rounded={"3xl"}
-								alt={"feature image"}
-								src={"./image/doct2.webp"}
-								objectFit={"cover"}
-							/>
-						</Flex>
-            <Flex data-aos="fade-left">
-							<Image
-								rounded={"3xl"}
-								alt={"feature image"}
-								src={"./image/doct3.webp"}
-								objectFit={"cover"}
-							/>
-						</Flex>
-            <Flex data-aos="fade-left">
-							<Image
-								rounded={"3xl"}
-								alt={"feature image"}
-								src={"./image/doct4.webp"}
-								objectFit={"cover"}
-							/>
-						</Flex>
-
-					</SimpleGrid>
-				</Container>
-			</Box>
 		</>
 	);
 }
