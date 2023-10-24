@@ -38,9 +38,17 @@ const images = [
 	"./image/gallery3.webp",
 ];
 
+const imageDoct = [
+	"./image/doct1.jpg",
+	"./image/doct2.jpg",
+	"./image/doct3.jpg",
+]
+
 export default function About({}: Props) {
 	const [isViewerOpen, setIsViewerOpen] = useState(false);
 	const [currentImage, setCurrentImage] = useState(0);
+	const [currentImageDoct, setCurrentImageDoct] = useState(0);
+	const [isViewerDoctOpen, setIsViewerDoctOpen] = useState(false);
 
 	const openImageViewer = useCallback((index: number) => {
 		setCurrentImage(index);
@@ -50,6 +58,16 @@ export default function About({}: Props) {
 	const closeImageViewer = () => {
 		setCurrentImage(0);
 		setIsViewerOpen(false);
+	};
+
+		const openImageDoctViewer = useCallback((index: number) => {
+		setCurrentImageDoct(index);
+		setIsViewerDoctOpen(true);
+	}, []);
+
+	const closeImageDoctViewer = () => {
+		setCurrentImageDoct(0);
+		setIsViewerDoctOpen(false);
 	};
 
 	useEffect(() => {
@@ -144,7 +162,42 @@ export default function About({}: Props) {
 			</Box>
 
 			<Box my={12}>
-				<Container>
+					<Container>
+					<Heading size={{ base: "lg", md: "xl" }} mb={5} textAlign={'center'} color={"primary.main"}>
+					คณะแพทย์ประจำคลินิก
+							</Heading>
+						<SimpleGrid
+							columns={{ base: 1, md: 2, lg: 3 }}
+							spacing={10}
+							data-aos="fade-up"
+						>
+							<Image
+								rounded={"3xl"}
+								alt={"feature image"}
+								src={"./image/doct1.jpg"}
+								objectFit={"cover"}
+                onClick={()=>openImageDoctViewer(0)}
+							/>
+							<Image
+								rounded={"3xl"}
+								alt={"feature image"}
+								src={"./image/doct2.jpg"}
+								objectFit={"cover"}
+                onClick={()=>openImageDoctViewer(1)}
+							/>
+							<Image
+								rounded={"3xl"}
+								alt={"feature image"}
+								src={"./image/doct3.jpg"}
+								objectFit={"cover"}
+                onClick={()=>openImageDoctViewer(2)}
+							/>
+						</SimpleGrid>
+					</Container>
+				</Box>
+
+			{/* <Box   bg={"primary.25"}>
+				<Container py={12}>
 					<SimpleGrid
 						columns={{ base: 1, md: 2, lg: 3 }}
 						spacing={10}
@@ -206,7 +259,7 @@ export default function About({}: Props) {
 						</VStack>
 					</SimpleGrid>
 				</Container>
-			</Box>
+			</Box> */}
 
 			<Flex
 				w={"full"}
@@ -288,6 +341,15 @@ export default function About({}: Props) {
 					disableScroll={false}
 					closeOnClickOutside={true}
 					onClose={closeImageViewer}
+				/>
+			)}
+			{isViewerDoctOpen && (
+				<ImageViewer
+					src={imageDoct}
+					currentIndex={currentImageDoct}
+					disableScroll={false}
+					closeOnClickOutside={true}
+					onClose={closeImageDoctViewer}
 				/>
 			)}
 		</>
