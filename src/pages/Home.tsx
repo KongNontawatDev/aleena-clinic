@@ -268,7 +268,7 @@ export default function Home({}: Props) {
 						as="video"
 						autoPlay
 						controls
-						src="./image/video.mp4"
+						src="./image/video2.mp4"
 						objectFit="contain"
 						sx={{
 							aspectRatio: "16/9",
