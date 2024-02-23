@@ -42,6 +42,7 @@ const imageDoct = [
 	"./image/doct1.jpg",
 	"./image/doct2.jpg",
 	"./image/doct3.jpg",
+	"./image/doct4.jpg",
 ]
 
 export default function About({}: Props) {
@@ -164,10 +165,10 @@ export default function About({}: Props) {
 			<Box my={12}>
 					<Container>
 					<Heading size={{ base: "lg", md: "xl" }} mb={5} textAlign={'center'} color={"primary.main"}>
-					คณะแพทย์ประจำคลินิก
+					แนะนำทันตแพทย์ประจำคลินิก
 							</Heading>
 						<SimpleGrid
-							columns={{ base: 1, md: 2, lg: 3 }}
+							columns={{ base: 1, md: 2, lg: 4 }}
 							spacing={10}
 							data-aos="fade-up"
 						>
@@ -191,6 +192,13 @@ export default function About({}: Props) {
 								src={"./image/doct3.jpg"}
 								objectFit={"cover"}
                 onClick={()=>openImageDoctViewer(2)}
+							/>
+							<Image
+								rounded={"3xl"}
+								alt={"feature image"}
+								src={"./image/doct4.jpg"}
+								objectFit={"cover"}
+                onClick={()=>openImageDoctViewer(3)}
 							/>
 						</SimpleGrid>
 					</Container>
