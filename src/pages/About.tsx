@@ -165,7 +165,7 @@ export default function About({}: Props) {
 			<Box my={12}>
 					<Container>
 					<Heading size={{ base: "lg", md: "xl" }} mb={5} textAlign={'center'} color={"primary.main"}>
-					แนะนำทันตแพทย์ประจำคลินิก
+					แนะนำทันตแพทย์ประจำคลินิก 
 							</Heading>
 						<SimpleGrid
 							columns={{ base: 1, md: 2, lg: 4 }}
