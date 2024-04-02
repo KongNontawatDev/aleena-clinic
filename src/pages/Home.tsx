@@ -553,6 +553,8 @@ export default function Home({}: Props) {
 					onClose={closeImageViewer}
 				/>
 			)}
+
+			
 			{isViewerOpenPromotion && (
 				<ImageViewer
 					src={imagePromotion}
