@@ -466,7 +466,7 @@ export default function Home({}: Props) {
 						<Image
 							rounded={"3xl"}
 							alt={"feature image"}
-							src={"./image/promotion1.webp"}
+							src={"./image/promotion1_new.webp"}
 							objectFit={"cover"}
 							onClick={() => openImageViewerPromotion(0)}
 							data-aos="fade-up"
