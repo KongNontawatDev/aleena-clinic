@@ -36,6 +36,7 @@ import { Pagination, Autoplay } from "swiper";
 import ImageViewer from "react-simple-image-viewer";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from "react-helmet";
 type Props = {};
 
 interface FeatureProps {
@@ -70,7 +71,6 @@ const FeatureList = ({ text, icon }: FeatureProps) => {
 		</Stack>
 	);
 };
-
 
 const imagePromotion = ["./image/promotion1.webp"];
 
@@ -139,6 +139,23 @@ export default function Home({}: Props) {
 	}, []);
 	return (
 		<>
+			<Helmet>
+				<meta charSet="utf-8" />
+				<title>Aleena dental clinic</title>
+				<link rel="canonical" href="https://aleenaclinic.com" />
+				<meta name="description" content="(จัดฟัน ทำฟัน ฟอกสีฟัน) คลินิกทันตกรรมอลีนา สาขาในเมืองยโสธร(ถนนแจ้งสนิท) บริหารงานโดย ทพ. ปรัชญ์"></meta>
+				<meta property="og:title" content="Aleena dental clinic" />
+				<meta
+					property="og:description"
+					content="(จัดฟัน ทำฟัน ฟอกสีฟัน) คลินิกทันตกรรมอลีนา สาขาในเมืองยโสธร(ถนนแจ้งสนิท) บริหารงานโดย ทพ. ปรัชญ์"
+				/>
+				<meta property="og:type" content="article" />
+				<meta property="og:url" content="https://aleenaclinic.com" />
+				<meta
+					property="og:image"
+					content="https://aleenaclinic.com/image/cover_image.png"
+				/>
+			</Helmet>
 			{/* Banner */}
 			<Box
 				bgGradient="linear(to-b,rgba(117,207,205,0.21) 0%,rgba(255,255,255,1)) 30%"
@@ -202,13 +219,16 @@ export default function Home({}: Props) {
 									" รอยยิ้มที่สมบูรณ์ออกแบบได้ด้วยตัวคุณ "
 									ที่คลีนิกทันตกรรมอลีนาให้มากกว่าการรักษา …เหนือกว่าการทำฟัน
 									คือความใส่ใจ
-									<Text fontSize={{ base: "sm", lg: "xl" }} mt={2} textIndent={'50px'} color={"gray.500"}>
-									พร้อมมอบประสบการณ์การทำฟันที่แตกต่าง
-									มาร่วมพิสูจน์ทุกคำรีวิวที่เกิดขึ้นที่นี่ คลินิกทันตกรรมอลีนา 
+									<Text
+										fontSize={{ base: "sm", lg: "xl" }}
+										mt={2}
+										textIndent={"50px"}
+										color={"gray.500"}
+									>
+										พร้อมมอบประสบการณ์การทำฟันที่แตกต่าง
+										มาร่วมพิสูจน์ทุกคำรีวิวที่เกิดขึ้นที่นี่ คลินิกทันตกรรมอลีนา
+									</Text>
 								</Text>
-								</Text>
-
-								
 
 								<Stack direction={{ base: "column", md: "row" }} spacing={4}>
 									<Button
@@ -262,7 +282,7 @@ export default function Home({}: Props) {
 				isCentered
 				size={"6xl"}
 			>
-				<ModalOverlay zIndex={20}/>
+				<ModalOverlay zIndex={20} />
 				<ModalContent>
 					<Box
 						as="video"
@@ -554,7 +574,6 @@ export default function Home({}: Props) {
 				/>
 			)}
 
-			
 			{isViewerOpenPromotion && (
 				<ImageViewer
 					src={imagePromotion}
