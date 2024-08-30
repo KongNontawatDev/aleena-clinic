@@ -72,7 +72,7 @@ export default function Service({}: Props) {
 						<Flex data-aos="fade-right">
 							<Image
 								rounded={"3xl"}
-								alt={"feature image"}
+								alt={"ทำไมต้องจัดฟัน | คลินิกทันตกรรมอลีนา - Aleena dental clinic"}
 								src={"./image/banner5.webp"}
 								objectFit={"cover"}
 							/>
@@ -111,7 +111,7 @@ export default function Service({}: Props) {
 						<Flex data-aos="fade-right" order={{ base: 1, md: 2 }}>
 							<Image
 								rounded={"3xl"}
-								alt={"feature image"}
+								alt={"จัดฟันช่วยเรื่องอะไรบ้าง | คลินิกทันตกรรมอลีนา - Aleena dental clinic"}
 								src={"./image/banner1.webp"}
 								objectFit={"cover"}
 							/>
@@ -150,7 +150,7 @@ export default function Service({}: Props) {
 						<Flex data-aos="fade-right">
 							<Image
 								rounded={"3xl"}
-								alt={"feature image"}
+								alt={"ขั้นตอนการเข้ารับการรักษาจัดฟัน | คลินิกทันตกรรมอลีนา - Aleena dental clinic"}
 								src={"./image/banner4.webp"}
 								objectFit={"cover"}
 							/>

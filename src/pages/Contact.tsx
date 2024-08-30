@@ -61,7 +61,7 @@ export default function Contact({}: Props) {
 						<Image
 							rounded={"3xl"}
 							maxHeight={"xl"}
-							alt={"feature image"}
+							alt={"รูปภาพ ไลน์ คลินิกทันตกรรมอลีนา สาขาเมืองยโสธร line, คลินิกทันตกรรมอลีนา - Aleena dental clinic สาขายโสธร"}
 							src={"./image/contact1.webp"}
 							objectFit={"cover"}
 						/>
@@ -70,7 +70,7 @@ export default function Contact({}: Props) {
 						<Flex data-aos="fade-right">
 							<Image
 								rounded={"3xl"}
-								alt={"feature image"}
+								alt={"รูปภาพ แผนที่ ที่ตั้ง คลินิกทันตกรรมอลีนา สาขาเมืองยโสธร, คลินิกทันตกรรมอลีนา - Aleena dental clinic สาขายโสธร"}
 								src={"./image/map1.webp"}
 								objectFit={"cover"}
 							/>
@@ -83,7 +83,7 @@ export default function Contact({}: Props) {
 						>
 							<Image
 								rounded={"3xl"}
-								alt={"feature image"}
+								alt={"รูปภาพ เฟสบุ๊ค คลินิกทันตกรรมอลีนา สาขาเมืองยโสธร facebook, คลินิกทันตกรรมอลีนา - Aleena dental clinic สาขายโสธร"}
 								src={"./image/opened2.webp"}
 								objectFit={"cover"}
 							/>

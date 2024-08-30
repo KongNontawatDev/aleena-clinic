@@ -234,7 +234,7 @@ export default function Navbar() {
 							<Flex justify={{ base: "start" }} align={"center"}>
 								<Image
 									src="./image/logo.png"
-									alt="logo"
+									alt="โลโก้ logo | คลินิกทันตกรรมอลีนา - Aleena dental clinic สาขายโสธร"
 									height={{ base: 39, md: 50 }}
 									width={{ base: 39, md: 50 }}
 								/>

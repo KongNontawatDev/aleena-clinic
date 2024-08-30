@@ -89,7 +89,7 @@ export default function About({}: Props) {
 				<Container py={12}>
 					<Flex data-aos="fade-down" justify={"center"}>
 						<Image
-							alt={"feature image"}
+							alt={"รูปภาพ โลโก้ logo image , คลินิกทันตกรรมอลีนา - Aleena dental clinic สาขายโสธร"}
 							src={"./image/logo.png"}
 							width={{ base: 76, md: 100 }}
 						/>
@@ -139,7 +139,7 @@ export default function About({}: Props) {
 						<Flex data-aos="fade-right">
 							<Image
 								rounded={"3xl"}
-								alt={"feature image"}
+								alt={"โปรโมชั่นพิเศษ image , คลินิกทันตกรรมอลีนา - Aleena dental clinic สาขายโสธร"}
 								src={"./image/img9.webp"}
 								objectFit={"cover"}
 								onClick={() => openImageViewer(0)}
@@ -186,28 +186,28 @@ export default function About({}: Props) {
 					>
 						<Image
 							rounded={"3xl"}
-							alt={"feature image"}
+							alt={"ทันตแพทย์ประจำคลินิก image, คลินิกทันตกรรมอลีนา - Aleena dental clinic สาขายโสธร"}
 							src={"./image/doct1.jpg"}
 							objectFit={"cover"}
 							onClick={() => openImageDoctViewer(0)}
 						/>
 						<Image
 							rounded={"3xl"}
-							alt={"feature image"}
+							alt={"ทันตแพทย์ประจำคลินิก image, คลินิกทันตกรรมอลีนา - Aleena dental clinic สาขายโสธร"}
 							src={"./image/doct2.jpg"}
 							objectFit={"cover"}
 							onClick={() => openImageDoctViewer(1)}
 						/>
 						<Image
 							rounded={"3xl"}
-							alt={"feature image"}
+							alt={"ทันตแพทย์ประจำคลินิก image, คลินิกทันตกรรมอลีนา - Aleena dental clinic สาขายโสธร"}
 							src={"./image/doct3.jpg"}
 							objectFit={"cover"}
 							onClick={() => openImageDoctViewer(2)}
 						/>
 						<Image
 							rounded={"3xl"}
-							alt={"feature image"}
+							alt={"ทันตแพทย์ประจำคลินิก image, คลินิกทันตกรรมอลีนา - Aleena dental clinic สาขายโสธร"}
 							src={"./image/doct4.jpg"}
 							objectFit={"cover"}
 							onClick={() => openImageDoctViewer(3)}
@@ -341,7 +341,7 @@ export default function About({}: Props) {
 									<SwiperSlide style={{ borderRadius: "1.5rem" }} key={index}>
 										<Image
 											rounded={"3xl"}
-											alt={"feature image"}
+											alt={"รูปภาพ บรรยากาศภายในคลินิก image, คลินิกทันตกรรมอลีนา - Aleena dental clinic สาขายโสธร"}
 											src={image}
 											objectFit={"cover"}
 											onClick={() => openImageViewer(index)}

@@ -33,7 +33,7 @@ export default function Footer() {
 						<Flex justify={{ base: "start" }} align={"center"}>
 							<Image
 								src="./image/logo.png"
-								alt="logo"
+								alt="โลโก้ logo  | คลินิกทันตกรรมอลีนา - Aleena dental clinic"
 								height={{ base: 50, md: 68 }}
 								width={{ base: 50, md: 68 }}
 								p={1}

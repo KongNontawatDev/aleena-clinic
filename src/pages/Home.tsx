@@ -254,7 +254,7 @@ type={`article`} />
 						>
 							<Image
 								rounded={"3xl"}
-								alt={"banner Image"}
+								alt={"banner Image, โปรโมชั่น , , คลินิกทันตกรรมอลีนา - Aleena dental clinic สาขายโสธร"}
 								objectFit={"cover"}
 								height={"80%"}
 								src={"./image/banner3.webp"}
@@ -540,7 +540,7 @@ type={`article`} />
 									<SwiperSlide style={{ borderRadius: "1.5rem" }} key={index}>
 										<Image
 											rounded={"3xl"}
-											alt={"feature image"}
+											alt={"รีวิวจากลูกค้า, คลินิกทันตกรรมอลีนา - Aleena dental clinic สาขายโสธร"}
 											src={image}
 											objectFit={"cover"}
 											onClick={() => openImageViewer(index)}
@@ -619,7 +619,7 @@ type={`article`} />
 					{imageGallary.map((image: any, index: number) => (
 						<SwiperSlide key={index}>
 							<Image
-								alt={"feature image"}
+								alt={"gallary ภาพบรรยากาศ, คลินิกทันตกรรมอลีนา - Aleena dental clinic สาขายโสธร"}
 								src={image}
 								objectFit={"cover"}
 								onClick={() => openImageViewer(index)}
@@ -652,7 +652,7 @@ type={`article`} />
 						>
 							<Image
 								rounded={"3xl"}
-								alt={"feature image"}
+								alt={"แผนที่ , ที่ตั้ง, คลินิกทันตกรรมอลีนา - Aleena dental clinic สาขายโสธร"}
 								src={"./image/map1.webp"}
 								objectFit={"cover"}
 							/>
@@ -665,7 +665,7 @@ type={`article`} />
 						>
 							<Image
 								rounded={"3xl"}
-								alt={"feature image"}
+								alt={"เฟสบุ๊ค , facebook, คลินิกทันตกรรมอลีนา - Aleena dental clinic สาขายโสธร"}
 								src={"./image/opened.webp"}
 								objectFit={"cover"}
 							/>

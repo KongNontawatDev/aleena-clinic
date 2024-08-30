@@ -95,7 +95,7 @@ export default function Promotion({}: Props) {
 				>
 					<SwiperSlide>
 						<Image
-							alt={"feature image"}
+							alt={"โปรโมชั่นพิเศษ วันนี้เท่านั้น!! | คลินิกทันตกรรมอลีนา - Aleena dental clinic"}
 							src={"./image/promotionBanner1.webp"}
 							objectFit={"cover"}
 							width={"100%"}
@@ -104,7 +104,7 @@ export default function Promotion({}: Props) {
 					</SwiperSlide>
 					<SwiperSlide>
 						<Image
-							alt={"feature image"}
+							alt={"โปรโมชั่นพิเศษ วันนี้เท่านั้น!! | คลินิกทันตกรรมอลีนา - Aleena dental clinic"}
 							src={"./image/promotionBanner2.webp"}
 							objectFit={"cover"}
 							width={"100%"}
@@ -167,7 +167,7 @@ export default function Promotion({}: Props) {
 							<Flex data-aos="fade-left">
 								<Image
 									rounded={"3xl"}
-									alt={"feature image"}
+									alt={"โปรโมชั่นพิเศษ วันนี้เท่านั้น!! | คลินิกทันตกรรมอลีนา - Aleena dental clinic"}
 									src={"./image/promotion2.webp"}
 									objectFit={"cover"}
 									onClick={() => openImageViewer(0)}
@@ -184,7 +184,7 @@ export default function Promotion({}: Props) {
 							<Flex order={{ base: 2, md: 1 }} data-aos="fade-right">
 								<Image
 									rounded={"3xl"}
-									alt={"feature image"}
+									alt={"โปรโมชั่นพิเศษ วันนี้เท่านั้น!! | คลินิกทันตกรรมอลีนา - Aleena dental clinic"}
 									src={"./image/promotion5.webp"}
 									objectFit={"cover"}
 									onClick={() => openImageViewer(3)}
@@ -247,7 +247,7 @@ export default function Promotion({}: Props) {
 							<AspectRatio ratio={1}>
 								<Image
 									rounded={"3xl"}
-									alt={"feature image"}
+									alt={"โปรโมชั่นพิเศษ วันนี้เท่านั้น!! | คลินิกทันตกรรมอลีนา - Aleena dental clinic"}
 									src={"./image/promotion4.webp"}
 									objectFit={"cover"}
 									onClick={() => openImageViewer(2)}
@@ -256,21 +256,21 @@ export default function Promotion({}: Props) {
 
 							<Image
 								rounded={"3xl"}
-								alt={"feature image"}
+								alt={"โปรโมชั่นพิเศษ วันนี้เท่านั้น!! | คลินิกทันตกรรมอลีนา - Aleena dental clinic"}
 								src={"./image/promotion3.webp"}
 								objectFit={"cover"}
 								onClick={() => openImageViewer(1)}
 							/>
 							<Image
 								rounded={"3xl"}
-								alt={"feature image"}
+								alt={"โปรโมชั่นพิเศษ วันนี้เท่านั้น!! | คลินิกทันตกรรมอลีนา - Aleena dental clinic"}
 								src={"./image/promotion6.webp"}
 								objectFit={"cover"}
 								onClick={() => openImageViewer(4)}
 							/>
 							<Image
 								rounded={"3xl"}
-								alt={"feature image"}
+								alt={"โปรโมชั่นพิเศษ วันนี้เท่านั้น!! | คลินิกทันตกรรมอลีนา - Aleena dental clinic"}
 								src={"./image/promotion7.webp"}
 								objectFit={"cover"}
 								onClick={() => openImageViewer(4)}
