@@ -19,6 +19,7 @@ import { Pagination, Autoplay } from "swiper";
 import ImageViewer from "react-simple-image-viewer";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from "react-helmet";
 
 type Props = {};
 
@@ -43,7 +44,7 @@ const imageDoct = [
 	"./image/doct2.jpg",
 	"./image/doct3.jpg",
 	"./image/doct4.jpg",
-]
+];
 
 export default function About({}: Props) {
 	const [isViewerOpen, setIsViewerOpen] = useState(false);
@@ -61,7 +62,7 @@ export default function About({}: Props) {
 		setIsViewerOpen(false);
 	};
 
-		const openImageDoctViewer = useCallback((index: number) => {
+	const openImageDoctViewer = useCallback((index: number) => {
 		setCurrentImageDoct(index);
 		setIsViewerDoctOpen(true);
 	}, []);
@@ -78,6 +79,26 @@ export default function About({}: Props) {
 	}, []);
 	return (
 		<>
+			<Helmet>
+				<meta charSet="utf-8" />
+				<title>เกี่ยวกับเรา | Aleena dental clinic</title>
+				<link rel="canonical" href="https://aleenaclinic.com/about" />
+				<meta
+					name="description"
+					content="เกี่ยวกับ คลินิกทันตกรรมอลีนา สาขาในเมืองยโสธร(ถนนแจ้งสนิท) บริหารงานโดย ทพ. ปรัชญ์"
+				></meta>
+				<meta property="og:title" content="Aleena dental clinic" />
+				<meta
+					property="og:description"
+					content="เกี่ยวกับ คลินิกทันตกรรมอลีนา สาขาในเมืองยโสธร(ถนนแจ้งสนิท) บริหารงานโดย ทพ. ปรัชญ์"
+				/>
+				<meta property="og:type" content="article" />
+				<meta property="og:url" content="https://aleenaclinic.com/about" />
+				<meta
+					property="og:image"
+					content="https://aleenaclinic.com/image/cover_image.png"
+				/>
+			</Helmet>
 			<Box>
 				<Container py={12}>
 					<Flex data-aos="fade-down" justify={"center"}>
@@ -91,7 +112,7 @@ export default function About({}: Props) {
 						size={{ base: "xl", md: "2xl" }}
 						textAlign={"center"}
 						color={"primary.main"}
-            data-aos="fade-down"
+						data-aos="fade-down"
 					>
 						คลินิกทันตกรรมอลีนา{" "}
 					</Heading>
@@ -99,7 +120,7 @@ export default function About({}: Props) {
 						size={{ base: "lg", md: "xl" }}
 						textAlign={"center"}
 						color={"primary.main"}
-            data-aos="fade-down"
+						data-aos="fade-down"
 					>
 						aleena dental clinic{" "}
 					</Heading>
@@ -163,46 +184,51 @@ export default function About({}: Props) {
 			</Box>
 
 			<Box my={12}>
-					<Container>
-					<Heading size={{ base: "lg", md: "xl" }} mb={5} textAlign={'center'} color={"primary.main"}>
-					แนะนำทันตแพทย์ประจำคลินิก 
-							</Heading>
-						<SimpleGrid
-							columns={{ base: 1, md: 2, lg: 4 }}
-							spacing={10}
-							data-aos="fade-up"
-						>
-							<Image
-								rounded={"3xl"}
-								alt={"feature image"}
-								src={"./image/doct1.jpg"}
-								objectFit={"cover"}
-                onClick={()=>openImageDoctViewer(0)}
-							/>
-							<Image
-								rounded={"3xl"}
-								alt={"feature image"}
-								src={"./image/doct2.jpg"}
-								objectFit={"cover"}
-                onClick={()=>openImageDoctViewer(1)}
-							/>
-							<Image
-								rounded={"3xl"}
-								alt={"feature image"}
-								src={"./image/doct3.jpg"}
-								objectFit={"cover"}
-                onClick={()=>openImageDoctViewer(2)}
-							/>
-							<Image
-								rounded={"3xl"}
-								alt={"feature image"}
-								src={"./image/doct4.jpg"}
-								objectFit={"cover"}
-                onClick={()=>openImageDoctViewer(3)}
-							/>
-						</SimpleGrid>
-					</Container>
-				</Box>
+				<Container>
+					<Heading
+						size={{ base: "lg", md: "xl" }}
+						mb={5}
+						textAlign={"center"}
+						color={"primary.main"}
+					>
+						แนะนำทันตแพทย์ประจำคลินิก
+					</Heading>
+					<SimpleGrid
+						columns={{ base: 1, md: 2, lg: 4 }}
+						spacing={10}
+						data-aos="fade-up"
+					>
+						<Image
+							rounded={"3xl"}
+							alt={"feature image"}
+							src={"./image/doct1.jpg"}
+							objectFit={"cover"}
+							onClick={() => openImageDoctViewer(0)}
+						/>
+						<Image
+							rounded={"3xl"}
+							alt={"feature image"}
+							src={"./image/doct2.jpg"}
+							objectFit={"cover"}
+							onClick={() => openImageDoctViewer(1)}
+						/>
+						<Image
+							rounded={"3xl"}
+							alt={"feature image"}
+							src={"./image/doct3.jpg"}
+							objectFit={"cover"}
+							onClick={() => openImageDoctViewer(2)}
+						/>
+						<Image
+							rounded={"3xl"}
+							alt={"feature image"}
+							src={"./image/doct4.jpg"}
+							objectFit={"cover"}
+							onClick={() => openImageDoctViewer(3)}
+						/>
+					</SimpleGrid>
+				</Container>
+			</Box>
 
 			{/* <Box   bg={"primary.25"}>
 				<Container py={12}>
