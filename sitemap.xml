@@ -1,0 +1,33 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <script />
+  <url>
+    <loc>https://aleenaclinic.com/</loc>
+    <lastmod>2024-08-30T03:54:24.106Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://aleenaclinic.com/service</loc>
+    <lastmod>2024-08-30T03:54:24.106Z</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://aleenaclinic.com/promotion</loc>
+    <lastmod>2024-08-30T03:54:24.106Z</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://aleenaclinic.com/about</loc>
+    <lastmod>2024-08-30T03:54:24.106Z</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://aleenaclinic.com/contact</loc>
+    <lastmod>2024-08-30T03:54:24.106Z</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>1</priority>
+  </url>
+</urlset>

@@ -4,7 +4,6 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { HelmetProvider } from "react-helmet-async";
 import Fonts from "./components/layouts/Fonts";
 import theme from "./components/layouts/theme";
-
 // pages
 import Layout from "./components/layouts/Layout";
 const Home = lazy(() => import("./pages/Home"));

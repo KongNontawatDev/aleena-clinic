@@ -17,6 +17,7 @@ import "./Home.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Facebook, Mail, MapPin, PhoneCall } from "react-feather";
+import SEO from "../SEO";
 
 type Props = {};
 
@@ -28,6 +29,14 @@ export default function Contact({}: Props) {
 	}, []);
 	return (
 		<>
+			<SEO
+				title={`ติดต่อเรา | คลินิกทันตกรรมอลีนา - Aleena dental clinic`}
+				description={
+					"ตั้งอยู่ที่ 658 ถนนแจ้งสนิท ตำบลในเมือง อำเภอเมือง จังหวัดยโสธร รหัสไปรษณีย์ 35000, โทร : 098 356 3711"
+				}
+				name={`คลินิกทันตกรรมอลีนา`}
+				type={`article`}
+			/>
 			<Box>
 				<Container py={12}>
 					<Heading
@@ -51,7 +60,7 @@ export default function Contact({}: Props) {
 					>
 						<Image
 							rounded={"3xl"}
-							maxHeight={'xl'}
+							maxHeight={"xl"}
 							alt={"feature image"}
 							src={"./image/contact1.webp"}
 							objectFit={"cover"}

@@ -18,6 +18,7 @@ import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper";
 import { Check } from "react-feather";
 import ImageViewer from "react-simple-image-viewer";
+import SEO from "../SEO";
 
 type Props = {};
 
@@ -50,15 +51,15 @@ const imagePromotion = [
 
 export default function Promotion({}: Props) {
 	const [isViewerOpen, setIsViewerOpen] = useState(false);
-  	const [currentImage, setCurrentImage] = useState(0);
+	const [currentImage, setCurrentImage] = useState(0);
 
 	const openImageViewer = useCallback((index: number) => {
-    setCurrentImage(index);
+		setCurrentImage(index);
 		setIsViewerOpen(true);
 	}, []);
 
 	const closeImageViewer = () => {
-    setCurrentImage(0);
+		setCurrentImage(0);
 		setIsViewerOpen(false);
 	};
 
@@ -70,6 +71,14 @@ export default function Promotion({}: Props) {
 
 	return (
 		<>
+			<SEO
+				title={`โปรโมชั่นพิเศษ วันนี้เท่านั้น!! | คลินิกทันตกรรมอลีนา - Aleena dental clinic`}
+				description={
+					"จัดฟังเริ่มตั้นที่ ... , เราขอเสนอโปรโมชั่นพิเศษสำหรับบริการทำฟันที่น่าตื่นเต้น!  ไม่ว่าคุณจะมีความต้องการทางทันตกรรมใด ๆ เช่นการขูดหินปูน, อุดฟัน, ถอนฟัน, และการจัดฟัน ทีมแพทย์และผู้เชี่ยวชาญของเราพร้อมที่จะให้บริการคุณด้วยความเชี่ยวชาญและความอบอุ่นที่เป็นเอกลักษณ์ของเรา"
+				}
+				name={`คลินิกทันตกรรมอลีนา`}
+				type={`article`}
+			/>
 			{/* Banner */}
 			<Box>
 				<Swiper
@@ -104,20 +113,18 @@ export default function Promotion({}: Props) {
 					</SwiperSlide>
 				</Swiper>
 
-				
-
 				{/* Promotion Info 1 */}
 				<Box>
 					<Container py={12}>
 						{/* Heading */}
-				<Stack spacing={4} data-aos="fade-down" mb={{base:4,md:8}}>
-					<Heading size={{ base: "lg", md: "2xl" }} textAlign={"center"}>
-						โปรโมชั่นทำฟัน
-						<Text as={"span"} color={"primary.main"}>
-							ที่คุณต้องไม่พลาด!!
-						</Text>
-					</Heading>
-				</Stack>
+						<Stack spacing={4} data-aos="fade-down" mb={{ base: 4, md: 8 }}>
+							<Heading size={{ base: "lg", md: "2xl" }} textAlign={"center"}>
+								โปรโมชั่นทำฟัน
+								<Text as={"span"} color={"primary.main"}>
+									ที่คุณต้องไม่พลาด!!
+								</Text>
+							</Heading>
+						</Stack>
 						<SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
 							<Stack spacing={4} data-aos="fade-right">
 								<Text
@@ -163,7 +170,7 @@ export default function Promotion({}: Props) {
 									alt={"feature image"}
 									src={"./image/promotion2.webp"}
 									objectFit={"cover"}
-                onClick={()=>openImageViewer(0)}
+									onClick={() => openImageViewer(0)}
 								/>
 							</Flex>
 						</SimpleGrid>
@@ -180,7 +187,7 @@ export default function Promotion({}: Props) {
 									alt={"feature image"}
 									src={"./image/promotion5.webp"}
 									objectFit={"cover"}
-                onClick={()=>openImageViewer(3)}
+									onClick={() => openImageViewer(3)}
 								/>
 							</Flex>
 							<Stack
@@ -243,7 +250,7 @@ export default function Promotion({}: Props) {
 									alt={"feature image"}
 									src={"./image/promotion4.webp"}
 									objectFit={"cover"}
-                  onClick={()=>openImageViewer(2)}
+									onClick={() => openImageViewer(2)}
 								/>
 							</AspectRatio>
 
@@ -252,21 +259,21 @@ export default function Promotion({}: Props) {
 								alt={"feature image"}
 								src={"./image/promotion3.webp"}
 								objectFit={"cover"}
-                onClick={()=>openImageViewer(1)}
+								onClick={() => openImageViewer(1)}
 							/>
 							<Image
 								rounded={"3xl"}
 								alt={"feature image"}
 								src={"./image/promotion6.webp"}
 								objectFit={"cover"}
-                onClick={()=>openImageViewer(4)}
+								onClick={() => openImageViewer(4)}
 							/>
 							<Image
 								rounded={"3xl"}
 								alt={"feature image"}
 								src={"./image/promotion7.webp"}
 								objectFit={"cover"}
-                onClick={()=>openImageViewer(4)}
+								onClick={() => openImageViewer(4)}
 							/>
 						</SimpleGrid>
 					</Container>
