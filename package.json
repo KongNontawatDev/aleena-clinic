@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && cp -r robots.txt ./dist && cp -r sitemap.xml ./dist",
+    "build": "tsc && vite build && cp -r robots.txt ./dist && cp -r sitemap.xml ./dist && cp -r ads.txt ./dist",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
