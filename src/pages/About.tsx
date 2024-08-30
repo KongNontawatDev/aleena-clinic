@@ -19,7 +19,7 @@ import { Pagination, Autoplay } from "swiper";
 import ImageViewer from "react-simple-image-viewer";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Helmet } from "react-helmet";
+import SEO from "../SEO";
 
 type Props = {};
 
@@ -79,26 +79,12 @@ export default function About({}: Props) {
 	}, []);
 	return (
 		<>
-			<Helmet>
-				<meta charSet="utf-8" />
-				<title>เกี่ยวกับเรา | Aleena dental clinic</title>
-				<link rel="canonical" href="https://aleenaclinic.com/about" />
-				<meta
-					name="description"
-					content="เกี่ยวกับ คลินิกทันตกรรมอลีนา สาขาในเมืองยโสธร(ถนนแจ้งสนิท) บริหารงานโดย ทพ. ปรัชญ์"
-				></meta>
-				<meta property="og:title" content="Aleena dental clinic" />
-				<meta
-					property="og:description"
-					content="เกี่ยวกับ คลินิกทันตกรรมอลีนา สาขาในเมืองยโสธร(ถนนแจ้งสนิท) บริหารงานโดย ทพ. ปรัชญ์"
-				/>
-				<meta property="og:type" content="article" />
-				<meta property="og:url" content="https://aleenaclinic.com/about" />
-				<meta
-					property="og:image"
-					content="https://aleenaclinic.com/image/cover_image.png"
-				/>
-			</Helmet>
+			<SEO
+				title={`เกี่ยวกับเรา | คลินิกทันตกรรมอลีนา - Aleena dental clinic`}
+				description={"เกี่ยวกับเรา |  คลินิกทันตกรรมอลีนา สาขาในเมืองยโสธร(ถนนแจ้งสนิท) บริหารงานโดย ทพ. ปรัชญ์"}
+				name={`คลินิกทันตกรรมอลีนา`}
+				type={`article`}
+			/>
 			<Box>
 				<Container py={12}>
 					<Flex data-aos="fade-down" justify={"center"}>

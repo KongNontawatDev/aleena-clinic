@@ -36,7 +36,7 @@ import { Pagination, Autoplay } from "swiper";
 import ImageViewer from "react-simple-image-viewer";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Helmet } from "react-helmet";
+import SEO from "../SEO";
 type Props = {};
 
 interface FeatureProps {
@@ -139,23 +139,11 @@ export default function Home({}: Props) {
 	}, []);
 	return (
 		<>
-			<Helmet>
-				<meta charSet="utf-8" />
-				<title>Aleena dental clinic</title>
-				<link rel="canonical" href="https://aleenaclinic.com" />
-				<meta name="description" content="(จัดฟัน ทำฟัน ฟอกสีฟัน) คลินิกทันตกรรมอลีนา สาขาในเมืองยโสธร(ถนนแจ้งสนิท) บริหารงานโดย ทพ. ปรัชญ์"></meta>
-				<meta property="og:title" content="Aleena dental clinic" />
-				<meta
-					property="og:description"
-					content="(จัดฟัน ทำฟัน ฟอกสีฟัน) คลินิกทันตกรรมอลีนา สาขาในเมืองยโสธร(ถนนแจ้งสนิท) บริหารงานโดย ทพ. ปรัชญ์"
-				/>
-				<meta property="og:type" content="article" />
-				<meta property="og:url" content="https://aleenaclinic.com" />
-				<meta
-					property="og:image"
-					content="https://aleenaclinic.com/image/cover_image.png"
-				/>
-			</Helmet>
+			<SEO
+title={`คลินิกทันตกรรมอลีนา - Aleena dental clinic`}
+description={"(จัดฟัน ทำฟัน ฟอกสีฟัน) คลินิกทันตกรรมอลีนา สาขาในเมืองยโสธร(ถนนแจ้งสนิท) บริหารงานโดย ทพ. ปรัชญ์"}
+name={`คลินิกทันตกรรมอลีนา`}
+type={`article`} />
 			{/* Banner */}
 			<Box
 				bgGradient="linear(to-b,rgba(117,207,205,0.21) 0%,rgba(255,255,255,1)) 30%"
