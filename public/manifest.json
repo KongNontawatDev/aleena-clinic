@@ -1,0 +1,62 @@
+{
+  "name": "คลินิกทันตกรรมอลีนา - Aleena Dental Clinic",
+  "short_name": "Aleena Clinic",
+  "description": "จัดฟัน ทำฟัน ฟอกสีฟัน | รอยยิ้มที่สมบูรณ์ออกแบบได้ด้วยตัวคุณ | คลินิกทันตกรรมอลีนา สาขาในเมืองยโสธร",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4DBCB5",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "th",
+  "dir": "ltr",
+  "categories": ["medical", "health", "business"],
+  "icons": [
+    {
+      "src": "./favicon/logo_favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./favicon/logo_favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./image/cover_image.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "โปรโมชั่น",
+      "short_name": "โปรโมชั่น",
+      "description": "ดูโปรโมชั่นพิเศษ",
+      "url": "/promotion",
+      "icons": [
+        {
+          "src": "./favicon/logo_favicon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "ติดต่อเรา",
+      "short_name": "ติดต่อ",
+      "description": "ข้อมูลการติดต่อ",
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "./favicon/logo_favicon.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}

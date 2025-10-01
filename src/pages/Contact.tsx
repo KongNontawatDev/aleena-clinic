@@ -45,7 +45,7 @@ export default function Contact({}: Props) {
 						textAlign={"center"}
 						data-aos="fade-up"
 					>
-						#ที่อยู่คลินิกทันตกรรมอลีนา <br></br>
+						📍 ที่อยู่คลินิกทันตกรรมอลีนา <br></br>
 						<Text as={"span"} color={"primary.main"}>
 							สาขาเมืองยโสธร
 						</Text>
@@ -107,7 +107,7 @@ export default function Contact({}: Props) {
 				<Container py={12}>
 					<Stack spacing={0}>
 						<Heading size={{ base: "lg", md: "xl" }} color={"primary.main"}>
-							คลินิกทันตกรรมอลีนา สาขาเมืองยโสธร{" "}
+							🏥 คลินิกทันตกรรมอลีนา สาขาเมืองยโสธร{" "}
 						</Heading>
 						<Stack mt={2} ml={6}>
 							<Stack direction={"row"}>
@@ -121,7 +121,8 @@ export default function Contact({}: Props) {
 									<MapPin />
 								</Flex>
 								<Text fontSize={{ base: "md", md: "lg" }}>
-									ตั้งอยู่ที่ 658 ถนนแจ้งสนิท ตำบลในเมือง อำเภอเมือง
+									📍 658 ถนนแจ้งสนิท ตำบลในเมือง อำเภอเมือง
+									<br />
 									จังหวัดยโสธร รหัสไปรษณีย์ 35000
 								</Text>
 							</Stack>
@@ -136,7 +137,9 @@ export default function Contact({}: Props) {
 								>
 									<PhoneCall />
 								</Flex>
-								<Text fontSize={{ base: "md", md: "lg" }}>098 356 3711</Text>
+								<Text fontSize={{ base: "md", md: "lg" }}>
+									📞 <strong>098 356 3711</strong>
+								</Text>
 							</Stack>
 
 							<Stack direction={"row"}>
@@ -150,7 +153,7 @@ export default function Contact({}: Props) {
 									<Facebook />
 								</Flex>
 								<Text fontSize={{ base: "md", md: "lg" }}>
-									<Link
+									📘 <Link
 										href="https://www.facebook.com/aleenadentalclinicyasothon"
 										textDecoration={"underline"}
 									>
@@ -170,7 +173,7 @@ export default function Contact({}: Props) {
 									<Mail />
 								</Flex>
 								<Text fontSize={{ base: "md", md: "lg" }}>
-									aleenadent@gmail.com
+									📧 aleenadent@gmail.com
 								</Text>
 							</Stack>
 						</Stack>
@@ -179,7 +182,7 @@ export default function Contact({}: Props) {
 
 					<Stack spacing={0}>
 						<Heading size={{ base: "lg", md: "xl" }} color={"primary.main"}>
-							คลินิกทันตกรรมอลีนา สาขาเลิงนกทา{" "}
+							🏥 คลินิกทันตกรรมอลีนา สาขาเลิงนกทา{" "}
 						</Heading>
 						<Stack mt={2} ml={6}>
 							<Stack direction={"row"}>
@@ -193,7 +196,8 @@ export default function Contact({}: Props) {
 									<MapPin />
 								</Flex>
 								<Text fontSize={{ base: "md", md: "lg" }}>
-									ตั้งอยู่ที่ 651/5 หมู่12 ปั้มน้ำมัน ปตท สามแยก อำเภอเลิงนกทา
+									📍 651/5 หมู่12 ปั้มน้ำมัน ปตท สามแยก อำเภอเลิงนกทา
+									<br />
 									จังหวัดยโสธร รหัสไปรษณีย์ 35120
 								</Text>
 							</Stack>
@@ -208,7 +212,9 @@ export default function Contact({}: Props) {
 								>
 									<PhoneCall />
 								</Flex>
-								<Text fontSize={{ base: "md", md: "lg" }}>094 039 2396</Text>
+								<Text fontSize={{ base: "md", md: "lg" }}>
+									📞 <strong>094 039 2396</strong>
+								</Text>
 							</Stack>
 
 							<Stack direction={"row"}>
@@ -251,7 +257,7 @@ export default function Contact({}: Props) {
 
 					<Stack spacing={0}>
 						<Heading size={{ base: "lg", md: "xl" }} color={"primary.main"}>
-							คลินิกทันตกรรมอลีนา สาขาเสลภูมิ{" "}
+							🏥 คลินิกทันตกรรมอลีนา สาขาเสลภูมิ{" "}
 						</Heading>
 						<Stack mt={2} ml={6}>
 							<Stack direction={"row"}>
@@ -265,7 +271,8 @@ export default function Contact({}: Props) {
 									<MapPin />
 								</Flex>
 								<Text fontSize={{ base: "md", md: "lg" }}>
-									ตั้งอยู่ที่ ปั้ม ปตท.ทองทวีปิโตรเลียมเสลภูมิ ตำบลขวัญเมือง
+									📍 ปั้ม ปตท.ทองทวีปิโตรเลียมเสลภูมิ ตำบลขวัญเมือง
+									<br />
 									อำเภอเสลภูมิ ร้อยเอ็ด 45120
 								</Text>
 							</Stack>
@@ -280,7 +287,9 @@ export default function Contact({}: Props) {
 								>
 									<PhoneCall />
 								</Flex>
-								<Text fontSize={{ base: "md", md: "lg" }}>091 834 6026</Text>
+								<Text fontSize={{ base: "md", md: "lg" }}>
+									📞 <strong>091 834 6026</strong>
+								</Text>
 							</Stack>
 
 							<Stack direction={"row"}>

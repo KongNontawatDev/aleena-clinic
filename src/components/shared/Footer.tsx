@@ -19,7 +19,7 @@ import { Facebook } from "react-feather";
 export default function Footer() {
 
 	return (
-		<Box bg={"primary.50"} color={useColorModeValue("gray.700", "gray.200")}>
+		<Box as="footer" role="contentinfo" bg={"primary.50"} color={useColorModeValue("gray.700", "gray.200")}>
 			<Container
 				as={Stack}
 				maxW={"6xl"}
@@ -70,7 +70,7 @@ export default function Footer() {
 					<Link href={"/"}>หน้าแรก</Link>
 					<Link href={"/promotion"}>โปรโมชั่น</Link>
 					<Link href={"/service"}>บริการ</Link>
-					<Link href={"/about"}>เกี่ยวกับเรา</Link>
+					<Link href={"/about"}>ℹเกี่ยวกับเรา</Link>
 					<Link href={"/contact"}>ติดต่อเรา</Link>
 				</Stack>
 			</Container>

@@ -211,6 +211,8 @@ export default function Navbar() {
 	};
 	return (
 		<Box
+			as="header"
+			role="banner"
 			bg={"white"}
 			color={"dark"}
 			borderBottom={1}
