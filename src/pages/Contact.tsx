@@ -98,6 +98,7 @@ export default function Contact({}: Props) {
 						allowFullScreen={false}
 						loading="lazy"
 						referrerPolicy="no-referrer-when-downgrade"
+						title="แผนที่ที่ตั้งคลินิกทันตกรรมอลีนา สาขาเมืองยโสธร 658 ถนนแจ้งสนิท ตำบลในเมือง อำเภอเมือง จังหวัดยโสธร"
 						data-aos="fade-up"
 					></iframe>
 				</Container>

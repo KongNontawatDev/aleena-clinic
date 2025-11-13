@@ -97,6 +97,7 @@ export default function SEO({
 			<meta property="og:title" content={title} />
 			<meta property="og:description" content={description} />
 			<meta property="og:image" content={image} />
+			<meta property="og:image:alt" content={title} />
 			<meta property="og:url" content={fullUrl} />
 			<meta property="og:site_name" content="คลินิกทันตกรรมอลีนา" />
 			<meta property="og:locale" content="th_TH" />
@@ -106,7 +107,9 @@ export default function SEO({
 			<meta name="twitter:title" content={title} />
 			<meta name="twitter:description" content={description} />
 			<meta name="twitter:image" content={image} />
+			<meta name="twitter:image:alt" content={title} />
 			<meta name="twitter:creator" content={name} />
+			<meta name="twitter:site" content="@aleenadentalclinic" />
 
 			{/* Additional SEO meta tags */}
 			<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />

@@ -90,9 +90,10 @@ export default function Navbar() {
 						target="_blank"
 						variant="ghost"
 						color={"gray.500"}
-						aria-label="facebook"
+						aria-label="ติดตามข่าวสารจากเพจเฟสบุ๊ค คลินิกทันตกรรมอลีนา"
+						title="ติดตามข่าวสารจากเพจเฟสบุ๊ค คลินิกทันตกรรมอลีนา"
 						fontSize="28px"
-						icon={<Facebook />}
+						icon={<Facebook aria-hidden="true" />}
 						size={"xs"}
 					/>
 				</Box>

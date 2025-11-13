@@ -57,7 +57,7 @@ export default function Footer() {
 									})}
 									fontFamily={"body_logo"}
 									fontSize={{ base: "xl", md: "2xl" }}
-									color={"gray.600"}
+									color={"gray.700"}
 									mt={-2}
 								>
 									dental clinic
@@ -67,11 +67,11 @@ export default function Footer() {
 					</LinkOverlay>
 				</LinkBox>
 				<Stack direction={"row"} spacing={6} wrap={"wrap"} justify={"center"}>
-					<Link href={"/"}>หน้าแรก</Link>
-					<Link href={"/promotion"}>โปรโมชั่น</Link>
-					<Link href={"/service"}>บริการ</Link>
-					<Link href={"/about"}>ℹเกี่ยวกับเรา</Link>
-					<Link href={"/contact"}>ติดต่อเรา</Link>
+					<Link href={"/"} color={"gray.700"}>หน้าแรก</Link>
+					<Link href={"/promotion"} color={"gray.700"}>โปรโมชั่น</Link>
+					<Link href={"/service"} color={"gray.700"}>บริการ</Link>
+					<Link href={"/about"} color={"gray.700"}>ℹเกี่ยวกับเรา</Link>
+					<Link href={"/contact"} color={"gray.700"}>ติดต่อเรา</Link>
 				</Stack>
 			</Container>
 
@@ -112,8 +112,13 @@ export default function Footer() {
               borderWidth={2}
               color={'white'}
 							href={"https://www.facebook.com/aleenadentalclinicyasothon"}
+							aria-label="ติดตามข่าวสารจากเพจเฟสบุ๊ค คลินิกทันตกรรมอลีนา"
+							title="ติดตามข่าวสารจากเพจเฟสบุ๊ค คลินิกทันตกรรมอลีนา"
 						>
-							<Facebook />
+							<Facebook aria-hidden="true" />
+							<span style={{ position: 'absolute', width: '1px', height: '1px', padding: 0, margin: '-1px', overflow: 'hidden', clip: 'rect(0, 0, 0, 0)', whiteSpace: 'nowrap', borderWidth: 0 }}>
+								ติดตามข่าวสารจากเพจเฟสบุ๊ค
+							</span>
 						</Button>
 					</Stack>
 				</Container>

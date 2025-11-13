@@ -234,6 +234,11 @@ type={`article`} />
 										_hover={{
 											bg: "primary.75",
 										}}
+										sx={{
+											"&:not(:hover)": {
+												color: "#FFFFFF !important",
+											}
+										}}
 									>
 										โปรโมชั่น
 									</Button>
@@ -371,6 +376,8 @@ type={`article`} />
 											src="./image/number-one.webp"
 											width={30}
 											height={30}
+											alt="หมายเลข 1 สาขาในเมืองยโสธร"
+											role="presentation"
 										/>
 									</Flex>
 									<Text fontWeight={600} fontSize={{ base: "md", md: "lg" }}>
@@ -383,6 +390,8 @@ type={`article`} />
 											src="./image/number-two.webp"
 											width={30}
 											height={30}
+											alt="หมายเลข 2 สาขาเสลภูมิ"
+											role="presentation"
 										/>
 									</Flex>
 									<Text fontWeight={600} fontSize={{ base: "md", md: "lg" }}>
@@ -395,6 +404,8 @@ type={`article`} />
 											src="./image/number-thee.webp"
 											width={30}
 											height={30}
+											alt="หมายเลข 3 สาขาเลิงนกทา"
+											role="presentation"
 										/>
 									</Flex>
 									<Text fontWeight={600} fontSize={{ base: "md", md: "lg" }}>
